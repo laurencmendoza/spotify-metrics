@@ -18,7 +18,416 @@ Here is the [link](https://trello.com/b/tUqarF97/spotify-metrics-planning) to my
 
 ## Component Tree
 
-## JSON sample
+## JSON samples
+
+The user can view their user information. This is the request that will be made to Spotify's API: 
+
+```
+GET https://api.spotify.com/v1/me
+```
+
+Example JSON data: 
+
+```
+{
+    "display_name": "Lauren Camille Mendoza",
+    "external_urls": {
+        "spotify": "https://open.spotify.com/user/12157798584"
+    },
+    "href": "https://api.spotify.com/v1/users/12157798584",
+    "id": "12157798584",
+    "images": [
+        {
+            "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-1/371523462_10218934505193629_7100179409208668762_n.jpg?stp=cp1_dst-jpg_p50x50&_nc_cat=102&ccb=1-7&_nc_sid=5fac6f&_nc_ohc=IiMTlDlC4-0AX8dFCZf&_nc_ht=scontent-lga3-1.xx&edm=AP4hL3IEAAAA&oh=00_AfAJYoESaWU8NDdTfcCDmorWD-XCmyQxGWtW0MkaKV0gzQ&oe=64FAAFBD",
+            "height": 64,
+            "width": 64
+        },
+        {
+            "url": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-1/371523462_10218934505193629_7100179409208668762_n.jpg?stp=cp1_dst-jpg_p320x320&_nc_cat=102&ccb=1-7&_nc_sid=ae1064&_nc_ohc=IiMTlDlC4-0AX8dFCZf&_nc_ht=scontent-lga3-1.xx&edm=AP4hL3IEAAAA&oh=00_AfBTd5oJ11M0CGMkjK36gUa0HBhzyS5JDxR-AUMViAkzvA&oe=64FAAFBD",
+            "height": 300,
+            "width": 300
+        }
+    ],
+    "type": "user",
+    "uri": "spotify:user:12157798584",
+    "followers": {
+        "href": null,
+        "total": 33
+    },
+    "country": "US",
+    "product": "premium",
+    "explicit_content": {
+        "filter_enabled": false,
+        "filter_locked": false
+    }
+}
+```
+
+The user can view their top artists from the last 4 weeks. This is the request that will be made to Spotify's API: 
+```
+GET https://api.spotify.com/v1/me/top/artists?time_range=short_term
+```
+
+Example JSON data: 
+```
+{
+  "items": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/06HL4z0CvFAxyc27GXpf02"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "pop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/06HL4z0CvFAxyc27GXpf02",
+      "id": "06HL4z0CvFAxyc27GXpf02",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6a224073987b930f99adc706",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746a224073987b930f99adc706",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786a224073987b930f99adc706",
+          "width": 160
+        }
+      ],
+      "name": "Taylor Swift",
+      "popularity": 100,
+      "type": "artist",
+      "uri": "spotify:artist:06HL4z0CvFAxyc27GXpf02"
+    }
+  ],
+  "total": 6,
+  "limit": 1,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/artists?limit=1&offset=0&time_range=short_term",
+  "next": "https://api.spotify.com/v1/me/top/artists?limit=1&offset=1&time_range=short_term",
+  "previous": null
+}
+```
+The user can view their top tracks from the last 4 weeks. This is the request that will be made to Spotify's API:
+```
+GET https://api.spotify.com/v1/me/top/tracks?time_range=short_term
+```
+
+Example JSON data:
+```
+{
+  "items": [
+    {
+      "album": {
+        "album_type": "SINGLE",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG"
+            },
+            "href": "https://api.spotify.com/v1/artists/1McMsnEElThX1knmY4oliG",
+            "id": "1McMsnEElThX1knmY4oliG",
+            "name": "Olivia Rodrigo",
+            "type": "artist",
+            "uri": "spotify:artist:1McMsnEElThX1knmY4oliG"
+          }
+        ],
+        "available_markets": [
+          "AD",
+          "AE",
+          "AR",
+          "AT",
+          "AU",
+          "BE",
+          "BG",
+          "BH",
+          "BO",
+          "BR",
+          "CA",
+          "CH",
+          "CL",
+          "CO",
+          "CR",
+          "CY",
+          "CZ",
+          "DE",
+          "DK",
+          "DO",
+          "DZ",
+          "EC",
+          "EE",
+          "EG",
+          "ES",
+          "FI",
+          "FR",
+          "GB",
+          "GR",
+          "GT",
+          "HK",
+          "HN",
+          "HU",
+          "ID",
+          "IE",
+          "IL",
+          "IN",
+          "IS",
+          "IT",
+          "JO",
+          "JP",
+          "KW",
+          "LB",
+          "LI",
+          "LT",
+          "LU",
+          "LV",
+          "MA",
+          "MC",
+          "MT",
+          "MX",
+          "MY",
+          "NI",
+          "NL",
+          "NO",
+          "NZ",
+          "OM",
+          "PA",
+          "PE",
+          "PH",
+          "PL",
+          "PS",
+          "PT",
+          "PY",
+          "QA",
+          "RO",
+          "SA",
+          "SE",
+          "SG",
+          "SK",
+          "SV",
+          "TH",
+          "TN",
+          "TR",
+          "TW",
+          "US",
+          "UY",
+          "VN",
+          "ZA"
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3SHq2tBWWsAG6NEOMKZSj0"
+        },
+        "href": "https://api.spotify.com/v1/albums/3SHq2tBWWsAG6NEOMKZSj0",
+        "id": "3SHq2tBWWsAG6NEOMKZSj0",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2738bfab8d577ad17a7b74d9f5f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e028bfab8d577ad17a7b74d9f5f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048518bfab8d577ad17a7b74d9f5f",
+            "width": 64
+          }
+        ],
+        "name": "bad idea right?",
+        "release_date": "2023-08-11",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:3SHq2tBWWsAG6NEOMKZSj0"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1McMsnEElThX1knmY4oliG"
+          },
+          "href": "https://api.spotify.com/v1/artists/1McMsnEElThX1knmY4oliG",
+          "id": "1McMsnEElThX1knmY4oliG",
+          "name": "Olivia Rodrigo",
+          "type": "artist",
+          "uri": "spotify:artist:1McMsnEElThX1knmY4oliG"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AE",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BH",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IN",
+        "IS",
+        "IT",
+        "JO",
+        "JP",
+        "KW",
+        "LB",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MA",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PS",
+        "PT",
+        "PY",
+        "QA",
+        "RO",
+        "SA",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TH",
+        "TN",
+        "TR",
+        "TW",
+        "US",
+        "UY",
+        "VN",
+        "ZA"
+      ],
+      "disc_number": 1,
+      "duration_ms": 184783,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USUG12304094"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2i8f4VnnBjy0yDqH2C452a"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2i8f4VnnBjy0yDqH2C452a",
+      "id": "2i8f4VnnBjy0yDqH2C452a",
+      "is_local": false,
+      "name": "bad idea right?",
+      "popularity": 92,
+      "preview_url": "https://p.scdn.co/mp3-preview/2bf179769229722bbe2e8e91093a40de2d1fa77a?cid=58e284505b074d21ac0cb51d686ce406",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:2i8f4VnnBjy0yDqH2C452a"
+    }
+  ],
+  "total": 50,
+  "limit": 1,
+  "offset": 0,
+  "href": "https://api.spotify.com/v1/me/top/tracks?limit=1&offset=0&time_range=short_term",
+  "next": "https://api.spotify.com/v1/me/top/tracks?limit=1&offset=1&time_range=short_term",
+  "previous": null
+}
+```
+
+The user can view their playlists. This is the request that will be made to Spotify's API: 
+```
+GET https://api.spotify.com/v1/me/playlists
+```
+
+Example JSON data: 
+
+```
+{
+    "href": "https://api.spotify.com/v1/users/12157798584/playlists?offset=0&limit=1",
+    "items": [
+        {
+            "collaborative": false,
+            "description": "eras setlist || 🦋🫶💜🧣🌃🐍💘🪩🌲🕰️ || spotify reply to my email before you take this down smh || no surprise songs",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/6qSYIKJihVKpWr2HDeHjxS"
+            },
+            "href": "https://api.spotify.com/v1/playlists/6qSYIKJihVKpWr2HDeHjxS",
+            "id": "6qSYIKJihVKpWr2HDeHjxS",
+            "images": [
+                {
+                    "height": null,
+                    "url": "https://i.scdn.co/image/ab67706c0000bebb042d86607b0f67a0db918aaa",
+                    "width": null
+                }
+            ],
+            "name": "THE ERAS TOUR SETLIST (in order)",
+            "owner": {
+                "display_name": "addie (taylor’s version)",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/gy7r24emokgau7hx89gqdz0l2"
+                },
+                "href": "https://api.spotify.com/v1/users/gy7r24emokgau7hx89gqdz0l2",
+                "id": "gy7r24emokgau7hx89gqdz0l2",
+                "type": "user",
+                "uri": "spotify:user:gy7r24emokgau7hx89gqdz0l2"
+            },
+            "primary_color": null,
+            "public": false,
+            "snapshot_id": "MTkxLDAxOTZiYzhjOTI5Yzc0NDA2Y2RhODZiMGViZWU1YzkzYWFlMWRhYWQ=",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/6qSYIKJihVKpWr2HDeHjxS/tracks",
+                "total": 43
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:6qSYIKJihVKpWr2HDeHjxS"
+        }
+    ],
+    "limit": 1,
+    "next": "https://api.spotify.com/v1/users/12157798584/playlists?offset=1&limit=1",
+    "offset": 0,
+    "previous": null,
+    "total": 74
+}
+```
+
 
 
 
