@@ -1,6 +1,6 @@
 # Spotify Metrics
 
-Spotify Metrics allows you to view metrics from your Spotify account, including your top songs, top artists, and saved playlists. While viewing your saved playlists, you can see each track's main audio features, such as the loudness, tempo, time signature, and key, as well as metrics generated from Spotify about the track's musical positiveness (valence), energy, and danceability. 
+Spotify Metrics allows you to view metrics from your Spotify account, including your top songs, top artists, and saved playlists. While viewing your saved playlists, you can see an overview of the playlist's musical positiveness (valence), energy, and danceability, as well as each track's main audio features, such as the loudness, tempo, time signature, and key signature.
 
 ## Screenshots
 
