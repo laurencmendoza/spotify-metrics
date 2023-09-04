@@ -9,12 +9,17 @@ Here is the [link](https://trello.com/b/tUqarF97/spotify-metrics-planning) to my
 ## Wireframes
 
 ### Home Page
+![Home Page Wireframe](https://github.com/laurencmendoza/spotify-metrics/assets/137251999/a2f4385c-a5b6-4d97-9d56-64814a298b5b)
 
 ### Playlists Page
+![Playlists Page Wireframe](https://github.com/laurencmendoza/spotify-metrics/assets/137251999/8871070f-fcf2-43d6-a04c-86f8f8fdc400)
 
 ### Playlist Details Page (Tracks)
 
+
 ### Metrics
+![Metrics Wireframe](https://github.com/laurencmendoza/spotify-metrics/assets/137251999/eb80025b-10b2-4d57-95ec-30a9b9465fd0)
+
 
 ## Component Tree
 
