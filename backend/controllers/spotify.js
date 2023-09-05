@@ -46,19 +46,19 @@ function login(req, res) {
 
 function callback(req, res) {
     const code = req.query.code || null;
-  
+
     axios({
-      method: 'post',
-      url: 'https://accounts.spotify.com/api/token',
-      data: querystring.stringify({
-        grant_type: 'authorization_code',
-        code: code,
-        redirect_uri: REDIRECT_URI
-      }),
-      headers: {
+        method: 'post',
+        url: 'https://accounts.spotify.com/api/token',
+        data: querystring.stringify({
+            grant_type: 'authorization_code',
+            code: code,
+            redirect_uri: REDIRECT_URI
+        }),
+        headers: {
         'content-type': 'application/x-www-form-urlencoded',
         Authorization: `Basic ${new Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
-      },
+        },
     })
     .then(response => {
         if (response.status === 200) {
@@ -66,41 +66,41 @@ function callback(req, res) {
             const { refresh_token } = response.data;
 
             axios.get(`http://localhost:8888/refresh_token?refresh_token=${refresh_token}`)
-              .then(response => {
-                res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`);
-              })
-              .catch(error => {
-                res.send(error);
-              });
-    
+                .then(response => {
+                    res.send(`<pre>${JSON.stringify(response.data, null, 2)}</pre>`);
+                })
+                .catch(error => {
+                    res.send(error);
+                });
+
         } else {
-          res.send(response);
+            res.send(response);
         }
-      })
-      .catch(error => {
-        res.send(error);
-      });
+    })
+        .catch(error => {
+            res.send(error);
+        });
 }
 
 function refresh(req,res) {
     const { refresh_token } = req.query;
-  
+
     axios({
-      method: 'post',
-      url: 'https://accounts.spotify.com/api/token',
-      data: querystring.stringify({
-        grant_type: 'refresh_token',
-        refresh_token: refresh_token
-      }),
-      headers: {
-        'content-type': 'application/x-www-form-urlencoded',
-        Authorization: `Basic ${new Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
-      },
+        method: 'post',
+        url: 'https://accounts.spotify.com/api/token',
+        data: querystring.stringify({
+            grant_type: 'refresh_token',
+            refresh_token: refresh_token
+        }),
+        headers: {
+            'content-type': 'application/x-www-form-urlencoded',
+            Authorization: `Basic ${new Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')}`,
+        },
     })
-      .then(response => {
-        res.send(response.data);
-      })
-      .catch(error => {
-        res.send(error);
-      });
+        .then(response => {
+            res.send(response.data);
+        })
+        .catch(error => {
+            res.send(error);
+        });
 }
