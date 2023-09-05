@@ -1,6 +1,29 @@
-.App {
+.logged-in-display {
     display: flex;
     height: 100vh;
+}
+
+.logged-out {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+button {
+    background-color: rgb(0, 177, 83); 
+    border: none;
+    border-radius: 25px;
+    height: 3rem;
+    padding: 0 24px;
+}
+
+button:hover {
+    background-color: rgb(103, 212, 110);
 }
 
 .navigation {

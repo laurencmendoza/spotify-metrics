@@ -11,9 +11,7 @@ export default function Home() {
         <h1>
             User Name
         </h1>
-        <a href="http://localhost:8888/login" className="signInButton">
-            LOG IN TO SPOTIFY
-        </a>
+        
         </div>
     )
 }
