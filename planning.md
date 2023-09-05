@@ -20,8 +20,9 @@ Here is the [link](https://trello.com/b/tUqarF97/spotify-metrics-planning) to my
 ### Metrics
 ![Metrics Wireframe](https://github.com/laurencmendoza/spotify-metrics/assets/137251999/9b2c8465-e686-48f7-a566-ea0bc18cc94f)
 
-
 ## Component Tree
+
+![Component Tree](https://github.com/laurencmendoza/spotify-metrics/assets/137251999/b471c39e-c4bf-4a73-9452-58258445b452)
 
 ## JSON samples
 
