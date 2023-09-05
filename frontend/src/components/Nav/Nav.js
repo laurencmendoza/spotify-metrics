@@ -11,7 +11,7 @@ export default function Nav() {
                 Playlists
             </Link>
             <Link className="nav-link" to="/metrics">
-                Metrics (Last 4 Weeks)
+                Metrics <span>(Last 4 Weeks)</span>
             </Link>
             <Link className="logout nav-link" to="/logout">
                 LOG OUT

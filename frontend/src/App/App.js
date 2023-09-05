@@ -13,12 +13,16 @@ import Metrics from '../pages/Metrics';
 export default function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/playlists" element={<Playlists/>}/>
-        <Route path="/metrics" element={<Metrics/>}/>
-      </Routes>
+      <div className="navigation">
+        <Nav/>
+      </div>
+      <div className="page-content">
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/playlists" element={<Playlists/>}/>
+          <Route path="/metrics" element={<Metrics/>}/>
+        </Routes>
+      </div>
     </div>
   );
 }
