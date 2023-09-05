@@ -1,0 +1,15 @@
+.home {
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+    padding: 2rem;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    height: 200px;
+}

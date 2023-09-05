@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    background-color: gray;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 3rem 0;
+}
