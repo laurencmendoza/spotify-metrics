@@ -14,7 +14,7 @@ nav {
     margin: 3rem 0;
 }
 
-span {
+.metrics-time-range {
     font-size: 1rem;
     display: block;
 }

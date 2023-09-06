@@ -10,6 +10,29 @@
     text-align: center;
 }
 
+table {
+    border-collapse: collapse;
+    margin: 50px;
+}
+
+td, th {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+.p-track {
+    max-width: 25vw;
+    
+}
+
+.p-track-artist-album {
+    font-size: .9rem;
+    color: #4C4E52;
+    display: flex;
+    gap: 1rem;
+}
+
+
 @media only screen and (min-width: 1024px) {
     .playlists {
         grid-template-columns: 1fr 1fr 1fr 1fr;

@@ -22,7 +22,6 @@ export default function PlaylistDetails() {
 
     return (
         <div>
-            <h1>Playlist Details</h1>
             {playlistTracks && (
                 <PlaylistTracks tracks={playlistTracks.items}/>
             )}
