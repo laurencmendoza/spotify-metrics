@@ -137,3 +137,4 @@ export const getCurrentUserProfile = () => axios.get('/me');
 export const getPlaylists = () => axios.get('/me/playlists');
 export const getTopSongs = () => axios.get('/me/top/tracks?time_range=medium_term&offset=0&limit=10')
 export const getTopArtists = () => axios.get('/me/top/artists?time_range=medium_term&offset=0&limit=10')
+export const getPlaylistTracks = (playlistId) => axios.get(`/playlists/${playlistId}/tracks`)

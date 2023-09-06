@@ -1,5 +1,32 @@
+import { getPlaylistTracks } from "../../../spotify"
+import { useState, useEffect } from 'react'
+import { useParams } from "react-router";
+import PlaylistTracks from "./PlaylistTracks";
+
 export default function PlaylistDetails() {
+    const [playlistTracks, setPlaylistTracks] = useState(null);
+    const { id } = useParams();
+    async function handleTrackRequest() {
+        try {
+            const {data} = await getPlaylistTracks(id);
+            setPlaylistTracks(data)
+            console.log(data)
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(()=> {
+        handleTrackRequest();
+    }, [])
+
     return (
-        <h1>playlist details</h1>
+        <div>
+            <h1>Playlist Details</h1>
+            {playlistTracks && (
+                <PlaylistTracks tracks={playlistTracks.items}/>
+            )}
+        </div>
     )
 }
+
