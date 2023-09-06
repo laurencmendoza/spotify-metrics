@@ -446,9 +446,9 @@ Example JSON data:
 | 3  | View playlists | AAU, I want to view all of my saved playlists from my Spotify account | 1 | 1 |
 | 4  | View playlist details | AAU, I want to view all of the tracks within my saved playlists, as well as analyses of the tracks on the playlist, including the playlists' energy, danceability, and musical positiveness (valence)  | 1 | 3 |
 | 5  | View track details | AAU, I want to view each track's main audio features, including loudness, tempo, time signature, and key on the playlist details page | 1 | 3 |
-| 6  | View metrics | AAU, I want to view my Spotify metrics, including my top artists, and top songs from the last 4 weeks | 1 | 1 |
+| 6  | View metrics | AAU, I want to view my Spotify metrics, including my top artists, and top songs from the last 6 months | 1 | 1 |
 | 7  | Sort by track features | AAU, I want to be able to sort the tracks on my playlist by loudness, tempo, time signature, and key | 2 | 5 |
-| 8  | Additional metrics | AAU, I want to be able to see my top artists and top songs from the last 6 months, and of all time | 2 | 6 |
+| 8  | Additional metrics | AAU, I want to be able to see my top artists and top songs from the last 4 weeks, and of all time | 2 | 6 |
 | 9  | Dark mode and light mode | AAU, I want to be able to toggle between a light mode display and a dark mode display on the application | 2 |  |
 | 10  | Search tracks | AAU, I want to be able to search for tracks on Spotify to view the track's audio features, so I can access any song on Spotify, rather than just my the tracks in my saved playlists | 3 |  |
 | 11  | Search playlists | AAU, I want to be able to search for playlists on Spotify to view the playlist's details, so I can access any playlist on Spotify, rather than just my saved playlists | 3 |  |
