@@ -1,5 +1,12 @@
-p {
-    margin: auto;
-    padding: 2rem;
+
+
+.playlists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.playlist {
+    margin: 15px;
+    justify-self: center;
     text-align: center;
 }

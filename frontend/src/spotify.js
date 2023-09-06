@@ -117,3 +117,23 @@ const getAccessToken = () => {
   };
 
 export const accessToken = getAccessToken()
+
+/**
+ * Axios global request headers
+ * https://github.com/axios/axios#global-axios-defaults
+ */
+axios.defaults.baseURL = 'https://api.spotify.com/v1';
+axios.defaults.headers['Authorization'] = `Bearer ${accessToken}`;
+axios.defaults.headers['Content-Type'] = 'application/json';
+
+/**
+ * Get Current User's Profile
+ * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-current-users-profile
+ * @returns {Promise}
+ */
+
+
+export const getCurrentUserProfile = () => axios.get('/me');
+export const getPlaylists = () => axios.get('/me/playlists');
+export const getTopSongs = () => axios.get('/me/top/tracks?time_range=short_term&offset=0&limit=10')
+export const getTopArtists = () => axios.get('/me/top/artists?time_range=short_term&offset=0&limit=10')

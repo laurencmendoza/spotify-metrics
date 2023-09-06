@@ -1,5 +1,19 @@
-p {
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
+.metrics {
+    display: flex;
+}
+
+.top-song {
+    display: flex;
+    gap: 10px;
+    margin: 1rem;
+    background-color: lightgray;
+}
+
+.song-album-img {
+    height: 50px;
+    width: auto;
+}
+
+.top-songs {
+    width: 50vw;
 }
