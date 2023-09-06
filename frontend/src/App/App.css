@@ -14,7 +14,7 @@ a {
     font-size: 1.25rem;
 }
 
-button {
+.login-button {
     background-color: rgb(0, 177, 83); 
     border: none;
     border-radius: 25px;
@@ -22,7 +22,7 @@ button {
     padding: 0 24px;
 }
 
-button:hover {
+.login-button:hover {
     background-color: rgb(103, 212, 110);
 }
 

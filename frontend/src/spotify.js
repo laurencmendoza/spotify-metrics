@@ -69,11 +69,11 @@ const refreshToken = async () => {
 export const logout = () => {
     // Clear all localStorage items
     for (const property in LOCALSTORAGE_KEYS) {
-      window.localStorage.removeItem(LOCALSTORAGE_KEYS[property]);
+        window.localStorage.removeItem(LOCALSTORAGE_KEYS[property]);
     }
     // Navigate to homepage
     window.location = window.location.origin;
-  };
+};
 
 /**
  * Handles logic for retrieving the Spotify access token from localStorage

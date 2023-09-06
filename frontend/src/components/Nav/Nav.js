@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import './Nav.css'
+import { logout } from '../../spotify'
 
 export default function Nav() {
     return (
@@ -13,9 +14,9 @@ export default function Nav() {
             <Link className="nav-link" to="/metrics">
                 Metrics <span>(Last 4 Weeks)</span>
             </Link>
-            <Link className="logout nav-link" to="/logout">
+            <button className="logout nav-link" onClick={logout}>
                 LOG OUT
-            </Link>
+            </button>
         </nav>
     )
 }

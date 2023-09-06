@@ -26,7 +26,7 @@ export default function App() {
       {!token ? (
         <div className="logged-out">
         <h1>Spotify Metrics</h1>
-        <button>
+        <button className="login-button">
         <a href="http://localhost:8888/login" className="signInButton">
         LOG IN TO SPOTIFY
         </a>
