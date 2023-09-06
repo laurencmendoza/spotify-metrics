@@ -17,20 +17,30 @@ export default function PlaylistAudioAnalysis({trackId}) {
         handleAnalysisRequest();
     }, [])
 
-    const arrayOfKeys = ['C', 'C#', '']
+    const arrayOfKeys = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B']
 
     const arrayOfModes = ['minor', 'major']
 
     return (
         <>
-        {audioAnalysis && (
+        {audioAnalysis ? (
         <>
         <td>{Math.round(audioAnalysis.track.tempo)}</td>
         <td>{audioAnalysis.track.time_signature}</td>
         <td>{audioAnalysis.bars.length}</td>
-        <td>{audioAnalysis.track.key}</td>
+        <td>{arrayOfKeys[audioAnalysis.track.key]}</td>
         <td>{arrayOfModes[audioAnalysis.track.mode]}</td>
         <td>{audioAnalysis.track.loudness} dB</td>
+        </>
+        ) :
+        (
+        <>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
         </>
         )}
         </>
