@@ -444,7 +444,7 @@ Example JSON data:
 | 1  | Log in to Spotify | AAU, I want to be able to log in to my Spotify account to view data about my account | 1 |  |
 | 2  | Home page info | AAU, I want to be able to see which account is logged in on the home page, including my picture and display name, along with instructions for how to use the application | 1 | 1 |
 | 3  | View playlists | AAU, I want to view all of my saved playlists from my Spotify account | 1 | 1 |
-| 4  | View playlist details | AAU, I want to view all of the tracks within my saved playlists, as well as analyses of the tracks on the playlist, including the playlists' energy, danceability, and musical positiveness (valence)  | 1 | 3 |
+| 4  | View playlist details | AAU, I want to view all of the tracks within my saved playlists, as well as analyses of the tracks on the playlist, including the tracks' tempo, time signature, key, and loudness | 1 | 3 |
 | 5  | View track details | AAU, I want to view each track's main audio features, including loudness, tempo, time signature, and key on the playlist details page | 1 | 3 |
 | 6  | View metrics | AAU, I want to view my Spotify metrics, including my top artists, and top songs from the last 6 months | 1 | 1 |
 | 7  | Sort by track features | AAU, I want to be able to sort the tracks on my playlist by loudness, tempo, time signature, and key | 2 | 5 |
@@ -453,6 +453,9 @@ Example JSON data:
 | 10  | Search tracks | AAU, I want to be able to search for tracks on Spotify to view the track's audio features, so I can access any song on Spotify, rather than just my the tracks in my saved playlists | 3 |  |
 | 11  | Search playlists | AAU, I want to be able to search for playlists on Spotify to view the playlist's details, so I can access any playlist on Spotify, rather than just my saved playlists | 3 |  |
 | 12  | Search albums | AAU, I want to be able to search for albums on Spotify to view the album's details, such as the overall energy, danceability, and musical positiveness (valence) | 3 |  |
+| 13  | Track details | AAU, I want to be able to click on a details link next to each track on the playlist details page to view additional track details | 3 |  |
+| 14  | Overall playlist track details | AAU, I want to be able to view aggregated audio analyses for the entire playlist, including overall energy, danceability, and musical positiveness | 3 |  |
+
 
 
 
