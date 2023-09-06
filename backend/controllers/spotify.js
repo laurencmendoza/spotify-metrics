@@ -13,7 +13,8 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 module.exports = {
     login, 
     callback,
-    refresh: refreshToken
+    refresh: refreshToken, 
+    playlistDetails
 }
 
 const generateRandomString = length => {

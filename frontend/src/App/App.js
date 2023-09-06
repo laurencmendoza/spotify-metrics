@@ -11,7 +11,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home/';
 import Playlists from '../pages/Playlists';
 import Metrics from '../pages/Metrics';
-
+import PlaylistDetails from '../pages/Playlists/PlaylistDetails';
 
 export default function App() {
   const [token, setToken] = useState(null);
@@ -27,7 +27,7 @@ export default function App() {
         <div className="logged-out">
         <h1>Spotify Metrics</h1>
         <button className="login-button">
-        <a href="http://localhost:8888/login" className="signInButton">
+        <a href="http://localhost:8888/login" className="sign-in-button">
         LOG IN TO SPOTIFY
         </a>
         </button>
@@ -42,6 +42,7 @@ export default function App() {
               <Route exact path="/" element={<Home/>} />
               <Route path="/playlists" element={<Playlists/>}/>
               <Route path="/metrics" element={<Metrics/>}/>
+              <Route path="/playlists/:id" element={<PlaylistDetails/>}/>
             </Routes>
           </div>
         </div>

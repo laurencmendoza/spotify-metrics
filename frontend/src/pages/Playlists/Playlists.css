@@ -1,12 +1,18 @@
-
-
 .playlists {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    text-decoration: none;
 }
 
 .playlist {
     margin: 15px;
     justify-self: center;
     text-align: center;
+}
+
+@media only screen and (min-width: 1024px) {
+    .playlists {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
 }
