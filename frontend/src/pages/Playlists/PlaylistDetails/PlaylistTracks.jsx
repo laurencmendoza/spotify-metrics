@@ -19,7 +19,6 @@ export default function PlaylistTracks({tracks}) {
             </p>
             </td>
             <PlaylistAudioAnalysis trackId={t.track.id}/>
-            
         </tr>
     ))
 
@@ -33,7 +32,9 @@ export default function PlaylistTracks({tracks}) {
                     <th>Track</th>
                     <th>Tempo</th>
                     <th>Time Signature</th>
+                    <th>Bars</th>
                     <th>Key</th>
+                    <th>Mode</th>
                     <th>Loudness</th>
                 </tr>
                 </thead>
