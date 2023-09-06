@@ -14,7 +14,6 @@ module.exports = {
     login, 
     callback,
     refresh: refreshToken, 
-    playlistDetails
 }
 
 const generateRandomString = length => {

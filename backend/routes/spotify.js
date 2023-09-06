@@ -9,6 +9,4 @@ router.get('/callback', spotifyCtrl.callback)
 
 router.get('/refresh_token', spotifyCtrl.refresh)
 
-router.get('/playlists/:id', spotifyCtrl.playlistDetails)
-
 module.exports = router

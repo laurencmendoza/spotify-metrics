@@ -7,7 +7,9 @@ export default function Playlist({playlists}) {
             {playlists.items.map((i, idx)=>(
                 <div className="playlist">
                     <Link to={`/playlists/${i.id}`}>
-                    <img className="playlist-img" src={i.images[0].url} height="200" width="200"/>
+                        {i.images[0] ? (
+                            <img className="playlist-img" src={i.images[0].url} height="200" width="200"/>
+                        ) : (<img className="playlist-img" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png" height="200" width="200"/>)}
                     </Link>
                     <p className="playlist-title">{i.name}</p>
                 </div>
