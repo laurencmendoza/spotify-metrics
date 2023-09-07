@@ -22,7 +22,7 @@ const app = express();
 app.use(cors())
 app.use(morgan('dev'))
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, './frontend/build')));
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 ///////////////////////////////
 // ROUTER MIDDLEWARE
@@ -31,7 +31,7 @@ app.use('/', spotifyRouter)
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './frontend/build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
 });
 
 // test route
