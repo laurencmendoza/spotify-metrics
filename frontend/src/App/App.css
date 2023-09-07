@@ -15,7 +15,7 @@
 }
 
 .login-button {
-    background-color: rgb(0, 177, 83); 
+    background-color: rgb(30, 215, 96); 
     border: none;
     border-radius: 25px;
     height: 3rem;
@@ -23,7 +23,7 @@
 }
 
 .login-button:hover {
-    background-color: rgb(103, 212, 110);
+    transform: scale(1.02);
 }
 
 .navigation {

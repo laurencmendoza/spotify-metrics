@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom'
 import './Nav.css'
 import { logout } from '../../spotify'
+import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Black.png'
 
 export default function Nav() {
     return (
         <nav>
+            <img className="spotify-logo" src={spotifyLogo}/>
             <Link className="nav-link" to="/">
                 Home
             </Link>
