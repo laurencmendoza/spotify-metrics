@@ -1,17 +1,9 @@
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 1.5rem;
-    background-color: gray;
-    height: 100%;
-}
-
 .nav-link {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     margin: 3rem 0;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 .metrics-time-range {
@@ -20,15 +12,9 @@ nav {
 }
 
 .logout {
-    background-color: darkgray;
     border-radius: 25px;
     border: 2px solid white;
     padding: 5px 10px;
-}
-
-.logout:hover {
-    background-color: lightgray;
-    color: black;
 }
 
 .spotify-logo {

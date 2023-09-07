@@ -9,10 +9,10 @@ export default function PlaylistTracks({tracks}) {
                 <span className="p-track-name">
                 {t.track.name} 
                 </span>
-            <p className="p-track-artist-album">
+            <p className="p-track-artist-album text-[lightgray]">
                 <span>
                 {t.track.artists[0].name}
-                </span> 
+                </span> ·
                 <span>
                 {t.track.album.name}
                 </span>

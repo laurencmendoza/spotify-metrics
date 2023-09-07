@@ -27,7 +27,12 @@ export default function App() {
     <div className="App">
       {!token ? (
         <div className="text-center">
-        <h1 className="text-[2.5rem] font-bold">Spotify Metrics</h1>
+        <h1 className="
+          text-[2.5rem] 
+          font-bold
+          my-[2rem]
+          text-white">
+        Spotify Metrics</h1>
         <button className="
           text-[white] 
           font-bold 

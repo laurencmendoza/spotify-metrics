@@ -32,15 +32,26 @@ export default function Home() {
 
         {profile && (
             <div>
-            <img className="
-                block
+                {profile.images[1] ? 
+                (<img className="
+                inline
+                mx-auto 
+                my-8 
+                rounded-full 
+                h-[200px]
+                " 
+                src={profile.images[1].url} alt={profile.display_name}/>)
+                : 
+                (<img className="
+                inline
                 mx-auto 
                 my-0 
                 rounded-full 
-                h-[200px]" 
-            src={profile.images[0].url} alt={profile.display_name}/>
+                h-[75px]" 
+                src={profile.images[0].url} alt={profile.display_name}/>
+                )}
             <h1 className="
-                text-[1.5rem]
+                text-[2rem]
                 font-bold
                 p-[2rem]">
                 {profile.display_name} </h1>

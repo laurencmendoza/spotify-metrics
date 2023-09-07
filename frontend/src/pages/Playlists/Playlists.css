@@ -28,7 +28,6 @@ td, th {
 
 .p-track-artist-album {
     font-size: .9rem;
-    color: #4C4E52;
     display: flex;
     gap: 1rem;
 }

@@ -11,7 +11,7 @@ export default function Playlist({playlists}) {
                             <img className="playlist-img" src={i.images[0].url} height="200" width="200" alt="playlist cover"/>
                         ) : (<img className="playlist-img" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png" height="200" width="200" alt="playlist cover placeholder"/>)}
                     </Link>
-                    <p className="playlist-title">{i.name}</p>
+                    <p className="playlist-title text-lg py-2">{i.name}</p>
                 </div>
             ))}
         </div>
