@@ -28,7 +28,7 @@ export default function Home() {
 
         {profile && (
             <div>
-            <img className="profile-img" src={profile.images[0].url}/>
+            <img className="profile-img" src={profile.images[0].url} alt={profile.display_name}/>
             <h1> {profile.display_name} </h1>
             </div>
         ) }

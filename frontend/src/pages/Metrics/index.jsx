@@ -12,6 +12,7 @@ export default function Metrics() {
         try {
             const {data} = await getTopSongs();
             setTopSongs(data)
+            console.log(data)
         } catch (err) {
             console.log(err)
         }

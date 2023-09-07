@@ -4,7 +4,7 @@ export default function TopSongs({topSongs}) {
             <h1>Top Songs</h1>
             {topSongs.map((s, idx)=>(
                 <div className="top-song-artist">
-                <img className="top-img" src={s.album.images[0].url}/>
+                <img className="top-img" src={s.album.images[0].url} alt={s.album.name}/>
                 <p>{s.name}</p>
                 </div>
             ))}

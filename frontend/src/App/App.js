@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect, useState } from 'react'
 import { accessToken } from '../spotify'
 
@@ -27,20 +26,32 @@ export default function App() {
   return (
     <div className="App">
       {!token ? (
-        <div className="logged-out">
-        <h1>Spotify Metrics</h1>
-        <button className="login-button">
-        <a href={LOGIN_URI} className="sign-in-button">
+        <div className="text-center">
+        <h1 className="text-[2.5rem] font-bold">Spotify Metrics</h1>
+        <button className="
+          text-[white] 
+          font-bold 
+          bg-spotify-green 
+          rounded-3xl 
+          h-[3rem] 
+          py-0 
+          px-[24px] 
+          divide-none 
+          hover:scale-[1.02]">
+        <a href={LOGIN_URI} 
+        className="text-xl">
         LOG IN TO SPOTIFY
         </a>
         </button>
         </div>
       ) : (
-        <div className="logged-in-display">
-          <div className="navigation">
+        <div className="
+          flex 
+          min-h-[100vh]">
+          <div className="w-[220px]">
             <Nav/>
           </div>
-          <div className="page-content">
+          <div className="w-full">
             <Routes>
               <Route exact path="/" element={<Home/>} />
               <Route path="/playlists" element={<Playlists/>}/>

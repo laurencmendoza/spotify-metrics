@@ -6,7 +6,7 @@ import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Black.png'
 export default function Nav() {
     return (
         <nav>
-            <img className="spotify-logo" src={spotifyLogo}/>
+            <img className="spotify-logo" src={spotifyLogo} alt="spotify logo in black"/>
             <Link className="nav-link" to="/">
                 Home
             </Link>
