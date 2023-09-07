@@ -3,6 +3,7 @@ const axios = require('axios')
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
+const FRONTEND_URI = process.env.FRONTEND_URI;
 
 /**
  * Generates a random string containing numbers and letters
@@ -74,7 +75,7 @@ function callback(req, res) {
             })
 
             // redirect to react app
-            res.redirect(`http://localhost:3000/?${queryParams}`)
+            res.redirect(`${FRONTEND_URI}/?${queryParams}`)
 
             // pass along tokens in query params
 

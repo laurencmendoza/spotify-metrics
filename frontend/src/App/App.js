@@ -15,7 +15,10 @@ import PlaylistDetails from '../pages/Playlists/PlaylistDetails';
 
 export default function App() {
   const [token, setToken] = useState(null);
-
+  const LOGIN_URI =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:8888/login'
+    : 'https://my-spotify-metrics.herokuapp.com/login';
 
   useEffect(()=> {
       setToken(accessToken)
@@ -27,7 +30,7 @@ export default function App() {
         <div className="logged-out">
         <h1>Spotify Metrics</h1>
         <button className="login-button">
-        <a href="http://localhost:8888/login" className="sign-in-button">
+        <a href={LOGIN_URI} className="sign-in-button">
         LOG IN TO SPOTIFY
         </a>
         </button>
