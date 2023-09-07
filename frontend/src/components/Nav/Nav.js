@@ -31,7 +31,7 @@ export default function Nav() {
             nav-link
             font-bold" 
             to="/metrics">
-                Metrics <span className="metrics-time-range">(Last 6 Months)</span>
+                Metrics
             </Link>
             <button className="
             logout

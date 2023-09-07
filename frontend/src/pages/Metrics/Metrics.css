@@ -16,5 +16,5 @@
 }
 
 .top-artists, .top-songs {
-    min-width: 360px;
+    width: 400px;
 }
