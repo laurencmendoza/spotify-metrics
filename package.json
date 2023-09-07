@@ -16,7 +16,7 @@
     "dev": "nodemon server.js", 
     "postinstall": "cd frontend && npm install", 
     "build": "NODE_ENV=production cd frontend/ && npm install && npm run build",
-    "start-server": "node server.js"
+    "start-server": "node backend/server.js"
   },
   "keywords": [],
   "author": "",
