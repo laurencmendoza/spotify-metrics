@@ -18,7 +18,7 @@ export default function App() {
   const LOGIN_URI =
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
-    : 'https://my-spotify-metrics.herokuapp.com/login';
+    : 'https://my-spotify-metrics-bab64fc6f36f.herokuapp.com/login';
 
   useEffect(()=> {
       setToken(accessToken)
