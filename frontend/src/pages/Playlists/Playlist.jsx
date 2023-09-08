@@ -3,7 +3,7 @@ import './Playlists.css'
 
 export default function Playlist({playlists}) {
     return(
-        <div className="playlists">
+        <div className="playlists md:w-[75vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-center">
             {playlists.items.map((i, idx)=>(
                 <div className="playlist">
                     <Link to={`/playlists/${i.id}`}>
@@ -19,7 +19,7 @@ export default function Playlist({playlists}) {
                                 width="200" 
                                 alt="playlist cover placeholder"/>)}
                     </Link>
-                    <p className="playlist-title text-lg py-2">{i.name}</p>
+                    <p className="playlist-title pt-4">{i.name}</p>
                 </div>
             ))}
         </div>

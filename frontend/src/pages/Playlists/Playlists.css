@@ -1,6 +1,4 @@
 .playlists {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     text-decoration: none;
 }
 
@@ -30,17 +28,4 @@ td, th {
     font-size: .9rem;
     display: flex;
     gap: 1rem;
-}
-
-
-@media only screen and (min-width: 1024px) {
-    .playlists {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .playlists {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
 }
