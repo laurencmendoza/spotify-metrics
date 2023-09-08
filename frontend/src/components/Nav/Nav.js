@@ -1,13 +1,11 @@
 import {Link} from 'react-router-dom'
-import './Nav.css'
-import { logout } from '../../spotify'
 import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Green.png'
 
 export default function Nav() {
     return (
         <div className="p-[1.5rem] bg-[black] h-full text-[white] text-[1.5rem]">
         <nav className="flex flex-col justify-start">
-            <img className="spotify-logo" src={spotifyLogo} alt="spotify logo in black"/>
+            <img className="h-[70px] w-[70px] mx-auto my-0" src={spotifyLogo} alt="spotify logo in black"/>
             <Link className="mt-12 mb-8 pl-6 font-bold" to="/">
                 Home
             </Link>
