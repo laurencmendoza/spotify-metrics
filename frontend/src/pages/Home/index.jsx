@@ -1,6 +1,7 @@
 import { getCurrentUserProfile } from '../../spotify'
 import { useState, useEffect } from 'react'
 import spotifyLogo from '../../spotify-icons/Spotify_Logo_RGB_White.png'
+import { logout } from '../../spotify';
 
 export default function Home() {
     const [profile, setProfile] = useState(null);
@@ -42,12 +43,14 @@ export default function Home() {
                     alt={profile.display_name}/>
                 )}
                 
-                <h1 className="text-[2.25rem] font-bold p-[2rem] mb-10">
+                <h1 className="text-[2.25rem] font-bold p-[2rem] ">
                     {profile.display_name} 
                 </h1>
             </div>
             )}
-
+        <button className="block mx-auto mb-10 rounded-full border-[2px] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
+            LOG OUT
+        </button>
             <div className="bg-white-smoke text-[black] min-h-[80vh] mx-auto">
                 <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View Spotify's audio analytics for the tracks in your saved playlists</h1>
                 <div className="mx-auto max-w-[720px] px-8">

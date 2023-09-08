@@ -5,20 +5,20 @@ import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Green.png'
 
 export default function Nav() {
     return (
-        <nav className="flex flex-col justify-start p-[1.5rem] bg-[black] h-full">
+        <div className="p-[1.5rem] bg-[black] h-full text-[white] text-[1.5rem]">
+        <nav className="flex flex-col justify-start">
             <img className="spotify-logo" src={spotifyLogo} alt="spotify logo in black"/>
-            <Link className="nav-link font-bold" to="/">
+            <Link className="mt-12 mb-8 pl-6 font-bold" to="/">
                 Home
             </Link>
-            <Link className="nav-link font-bold" to="/playlists">
+            <Link className="my-8 pl-6 font-bold" to="/playlists">
                 Playlists
             </Link>
-            <Link className="nav-link font-bold" to="/metrics/medium_term">
+            <Link className="my-8 pl-6 font-bold" to="/metrics/medium_term">
                 Metrics
             </Link>
-            <button className="logout hover:bg-white hover:text-dark-gray nav-link" onClick={logout}>
-                LOG OUT
-            </button>
         </nav>
+        
+    </div>
     )
 }

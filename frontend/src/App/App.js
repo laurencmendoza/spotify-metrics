@@ -78,7 +78,7 @@ export default function App() {
         </div>
       ) : (
         <div className="flex min-h-[100vh]">
-          <div className="w-[220px]">
+          <div>
             <Nav/>
           </div>
           <div className="w-full">
