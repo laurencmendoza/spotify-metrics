@@ -24,14 +24,14 @@ export default function PlaylistTracks({tracks}) {
 
 
     return (
-        <div className="playlist-tracks border-[red]">
+        <div className="playlist-tracks border-[red] mx-10">
             
             <table className="mx-auto">
                 <thead>
                 <tr>
-                    <th>Track</th>
+                    <th className="min-w-[260px]">Track</th>
                     <th>Tempo</th>
-                    <th>Time Signature</th>
+                    <th className="w-10">Time Signature</th>
                     <th>Bars</th>
                     <th>Key</th>
                     <th>Mode</th>

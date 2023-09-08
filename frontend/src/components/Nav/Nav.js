@@ -4,15 +4,15 @@ import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Green.png'
 export default function Nav() {
     return (
         <div className="p-[1.5rem] bg-[black] h-full text-[white] text-[1.5rem]">
-        <nav className="flex flex-col justify-start">
-            <img className="h-[70px] w-[70px] mx-auto my-0" src={spotifyLogo} alt="spotify logo in black"/>
-            <Link className="mt-[100px] mb-8 pl-4 font-bold" to="/">
+        <nav className="flex sm:flex-col sm:justify-start justify-between">
+            <img className="h-[40px] w-[40px] sm:h-[70px] sm:w-[70px] sm:mx-auto my-0" src={spotifyLogo} alt="spotify logo in black"/>
+            <Link className="sm:mt-[100px] sm:mb-8 sm:pl-4 font-bold text-[1.25rem]" to="/">
                 Home
             </Link>
-            <Link className="my-8 px-4 font-bold" to="/playlists">
+            <Link className="sm:my-8 sm:px-4 font-bold text-[1.25rem]" to="/playlists">
                 Playlists
             </Link>
-            <Link className="my-8 px-4 font-bold" to="/metrics/medium_term">
+            <Link className="sm:my-8 sm:px-4 font-bold text-[1.25rem] mr-4" to="/metrics/medium_term">
                 Metrics
             </Link>
         </nav>

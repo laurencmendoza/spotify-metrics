@@ -77,7 +77,7 @@ export default function App() {
           
         </div>
       ) : (
-        <div className="flex min-h-[100vh]">
+        <div className="sm:flex min-h-[100vh]">
           <div>
             <Nav/>
           </div>

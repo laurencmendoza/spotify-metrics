@@ -22,8 +22,8 @@ export default function Playlists() {
 
     return (
 
-        <div className="m-[3rem]">
-            <h1 className="text-[2rem] font-bold mb-4 mt-8">Your Playlists</h1>
+        <div className="sm:m-[3rem]">
+            <h1 className="text-center sm:text-left text-[2rem] font-bold mb-4 mt-8">Your Playlists</h1>
         {playlists && (
             <Playlist playlists={playlists}/>
         )}

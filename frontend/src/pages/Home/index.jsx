@@ -24,8 +24,8 @@ export default function Home() {
     return (
         <div className="h-full">
             <div className="flex justify-center my-10">
-                <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
-                <h1 className="text-[2.5rem] text-white">
+                <img className="h-[3rem] sm:h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
+                <h1 className="text-[2rem] sm:text-[2.5rem] text-white">
                     <span className="px-2 font-light">|</span> 
                     Metrics
                 </h1>
@@ -34,7 +34,7 @@ export default function Home() {
         {profile && (
             <div className="text-center">
                 {profile.images[1] ? 
-                (<img className="inline mx-auto my-4 rounded-full h-[200px]" 
+                (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
                     src={profile.images[1].url} 
                     alt={profile.display_name}/>)
                 : 
@@ -43,7 +43,7 @@ export default function Home() {
                     alt={profile.display_name}/>
                 )}
                 
-                <h1 className="text-[2.25rem] font-bold p-[2rem] ">
+                <h1 className="text-[1.5rem] sm:text-[2.25rem] font-bold p-[2rem] ">
                     {profile.display_name} 
                 </h1>
             </div>
