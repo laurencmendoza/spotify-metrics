@@ -21,7 +21,7 @@ export default function PlaylistDetails() {
     }, [])
 
     return (
-        <div>
+        <div className="xl:text-lg">
             {playlistTracks && (
                 <PlaylistTracks tracks={playlistTracks.items}/>
             )}

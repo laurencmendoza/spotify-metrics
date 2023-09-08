@@ -24,9 +24,9 @@ export default function PlaylistTracks({tracks}) {
 
 
     return (
-        <div className="playlist-tracks">
+        <div className="playlist-tracks border-[red]">
             
-            <table>
+            <table className="mx-auto">
                 <thead>
                 <tr>
                     <th>Track</th>

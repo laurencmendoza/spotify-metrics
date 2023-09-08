@@ -93,7 +93,7 @@ export default function Metrics() {
                 <Link to="/metrics/medium_term" className="hover:underline underline-offset-4 px-10">Last 6 Months</Link>
                 <Link to="/metrics/short_term" className="hover:underline underline-offset-4 pr-10">Last 4 Weeks</Link>
             </nav>
-            <div className="flex flex-col lg:flex-row gap-[3rem] justify-between mt-6 mx-auto">
+            <div className="flex flex-col lg:flex-row gap-[3rem] justify-between mt-6 mx-auto my-10">
                 {topSongsMT && timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} timeRange="Last 6 Months"/>}
                 {topSongsST && timeRange.id==="short_term" && <TopSongs topSongs={topSongsST.items} timeRange="Last 4 Weeks"/>}
                 {topSongsLT && timeRange.id==="long_term" && <TopSongs topSongs={topSongsLT.items} timeRange="All Time"/>}
