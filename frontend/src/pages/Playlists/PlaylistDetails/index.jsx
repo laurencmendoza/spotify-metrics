@@ -39,7 +39,7 @@ export default function PlaylistDetails() {
             {playlist ? (
                 <img className="h-[240px] mx-auto sm:mx-0" src={playlist.images[0].url} alt={playlist.name}/>
             ) : (
-                <img className="h-[240px] mx-auto sm:mx-0" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png"/>
+                <img className="h-[240px] mx-auto sm:mx-0 bg-[white]" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png"/>
             )}
             
                 <div className="m-10">
