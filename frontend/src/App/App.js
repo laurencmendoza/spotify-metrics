@@ -55,7 +55,7 @@ export default function App() {
                 <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View Spotify's audio analytics for the tracks in your saved playlists</h1>
                 <div className="mx-auto max-w-[720px] px-8">
                     <p className="text-xl xl:text-2xl my-4"> <span className="font-bold">My Spotify Metrics</span> allows you to view the following audio features:  </p>
-                    <ul className="text-left pl-8 w-[600px] list-decimal xl:text-xl">
+                    <ul className="text-left pl-8 max-w-[600px] list-decimal xl:text-xl">
                         <li><span className="font-bold">Tempo</span>: The overall estimated tempo of a track in beats per minute (BPM).</li>
                         <li><span className="font-bold">Time signature</span>: The estimated time signature, which is a notational convention to specify how many beats are in each bar or measure.</li>
                         <li><span className="font-bold">Bars</span>: A segment of music that holds a given number of beats. A bar is a unit of time for a piece of music. </li>
@@ -67,7 +67,7 @@ export default function App() {
                 <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View your top artists and top tracks based on your listening history</h1>
                 <div className="mx-auto max-w-[720px] px-8">
                     <p className="text-xl xl:text-2xl my-4"><span className="font-bold">My Spotify Metrics</span> allows you to view your top songs and top artists for the following time ranges:</p>
-                    <ul className="text-left pl-8 w-[480px] list-disc xl:text-xl pb-12">
+                    <ul className="text-left pl-8 max-w-[600px] list-disc xl:text-xl pb-12">
                         <li><span className="font-bold">Long term</span>: calculated from several years of data and including all new data as it becomes available</li>
                         <li><span className="font-bold">Medium term</span>: approximately the last 6 months</li>
                         <li><span className="font-bold">Short term</span>: approximately the last 4 weeks</li>
