@@ -1,31 +1,4 @@
-.playlists {
-    text-decoration: none;
-}
-
-.playlist {
-    margin: 15px;
-    justify-self: center;
-    text-align: center;
-    width: 200px;
-}
-
-table {
-    border-collapse: collapse;
-    margin: 50px;
-}
-
 td, th {
     border: 1px solid gray;
     padding: 10px;
-}
-
-.p-track {
-    max-width: 25vw;
-    
-}
-
-.p-track-artist-album {
-    font-size: .9rem;
-    display: flex;
-    gap: 1rem;
 }

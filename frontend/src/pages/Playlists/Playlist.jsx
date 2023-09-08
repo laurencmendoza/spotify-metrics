@@ -3,9 +3,9 @@ import './Playlists.css'
 
 export default function Playlist({playlists}) {
     return(
-        <div className="playlists md:w-[65vw] lg:w-[75vw] xl:w-[85vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-center">
+        <div className="md:w-[65vw] lg:w-[75vw] xl:w-[85vw] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-center">
             {playlists.items.map((i, idx)=>(
-                <div className="playlist">
+                <div className="m-[15px] justify-self-center text-center w-[200px]">
                     <Link to={`/playlists/${i.id}`}>
                         {i.images[0] ? (
                             <img className="playlist-img" 

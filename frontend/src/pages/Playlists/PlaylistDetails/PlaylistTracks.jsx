@@ -9,7 +9,7 @@ export default function PlaylistTracks({tracks}) {
                 <span className="p-track-name">
                 {t.track.name} 
                 </span>
-            <p className="p-track-artist-album text-[lightgray]">
+            <p className="text-[.9rem] flex gap-[1rem] text-[lightgray]">
                 <span>
                 {t.track.artists[0].name}
                 </span> ·
@@ -24,9 +24,8 @@ export default function PlaylistTracks({tracks}) {
 
 
     return (
-        <div className="playlist-tracks border-[red] mx-10">
-            
-            <table className="mx-auto">
+        <div className="mx-10">
+            <table className="mx-auto border-collapse m-[50px]">
                 <thead>
                 <tr>
                     <th className="min-w-[260px]">Track</th>
