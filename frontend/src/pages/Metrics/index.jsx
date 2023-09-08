@@ -88,12 +88,12 @@ export default function Metrics() {
 
     return (
         <div className="flex flex-col">
-            <nav className="flex justify-end text-xl mt-10">
-                <Link to="/metrics/long_term" className="hover:underline">All Time</Link>
-                <Link to="/metrics/medium_term" className="hover:underline px-10">Last 6 Months</Link>
-                <Link to="/metrics/short_term" className="hover:underline pr-10">Last 4 Weeks</Link>
+            <nav className="flex justify-end text-xl mt-10 mx-4 md:mr-10">
+                <Link to="/metrics/long_term" className="hover:underline underline-offset-4">All Time</Link>
+                <Link to="/metrics/medium_term" className="hover:underline underline-offset-4 px-10">Last 6 Months</Link>
+                <Link to="/metrics/short_term" className="hover:underline underline-offset-4 pr-10">Last 4 Weeks</Link>
             </nav>
-            <div className="flex flex-col lg:flex-row justify-evenly mt-6">
+            <div className="flex flex-col lg:flex-row gap-[3rem] justify-between mt-6 mx-auto">
                 {topSongsMT && timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} timeRange="Last 6 Months"/>}
                 {topSongsST && timeRange.id==="short_term" && <TopSongs topSongs={topSongsST.items} timeRange="Last 4 Weeks"/>}
                 {topSongsLT && timeRange.id==="long_term" && <TopSongs topSongs={topSongsLT.items} timeRange="All Time"/>}
