@@ -1,5 +1,5 @@
 import './Playlists.css'
-import { getPlaylists } from '../../spotify'
+import { getMyPlaylists } from '../../spotify'
 import { useState, useEffect } from 'react'
 import Playlist from './Playlist';
 
@@ -8,7 +8,7 @@ export default function Playlists() {
     
     async function handlePlaylistRequest() {
         try {
-            const {data} = await getPlaylists();
+            const {data} = await getMyPlaylists();
             setPlaylists(data)
             console.log(data)
         } catch (err) {

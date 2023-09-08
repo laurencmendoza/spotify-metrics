@@ -19,7 +19,6 @@ export default function Metrics() {
     const [topArtistsST, setTopArtistsST] = useState(null);
     const [topArtistsLT, setTopArtistsLT] = useState(null);
     const timeRange = useParams();
-    console.log(timeRange.id)
 
     async function handleTopSongRequestMT() {
         try {
