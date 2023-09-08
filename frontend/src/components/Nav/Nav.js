@@ -13,7 +13,7 @@ export default function Nav() {
             <Link className="nav-link font-bold" to="/playlists">
                 Playlists
             </Link>
-            <Link className="nav-link font-bold" to="/metrics">
+            <Link className="nav-link font-bold" to="/metrics/medium_term">
                 Metrics
             </Link>
             <button className="logout hover:bg-white hover:text-dark-gray nav-link" onClick={logout}>

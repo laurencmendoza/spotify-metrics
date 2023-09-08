@@ -60,7 +60,7 @@ export default function App() {
             <Routes>
               <Route exact path="/" element={<Home/>} />
               <Route path="/playlists" element={<Playlists/>}/>
-              <Route path="/metrics" element={<Metrics/>}/>
+              <Route path="/metrics/:id" element={<Metrics/>}/>
               <Route path="/playlists/:id" element={<PlaylistDetails/>}/>
             </Routes>
           </div>
