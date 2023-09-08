@@ -88,19 +88,19 @@ export default function Metrics() {
 
     return (
         <div className="flex flex-col">
-            <nav className="flex border-[red] border-[1px] justify-end">
-                <Link to="/metrics/long_term">All Time</Link>
-                <Link to="/metrics/medium_term" className="px-10">Last 6 Months</Link>
-                <Link to="/metrics/short_term" className="pr-10">Last 4 Weeks</Link>
+            <nav className="flex justify-end text-xl mt-10">
+                <Link to="/metrics/long_term" className="hover:underline">All Time</Link>
+                <Link to="/metrics/medium_term" className="hover:underline px-10">Last 6 Months</Link>
+                <Link to="/metrics/short_term" className="hover:underline pr-10">Last 4 Weeks</Link>
             </nav>
-            <div className="flex justify-evenly">
+            <div className="flex justify-evenly mt-6">
 
-                {topSongsMT && timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} />}
-                {topSongsST && timeRange.id==="short_term" && <TopSongs topSongs={topSongsST.items} />}
-                {topSongsLT && timeRange.id==="long_term" && <TopSongs topSongs={topSongsLT.items} />}
-                {topArtistsMT && timeRange.id==="medium_term" && <TopArtists topArtists={topArtistsMT.items} />}
-                {topArtistsST && timeRange.id==="short_term" && <TopArtists topArtists={topArtistsST.items} />}
-                {topArtistsLT && timeRange.id==="long_term" && <TopArtists topArtists={topArtistsLT.items} />}
+                {topSongsMT && timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} timeRange="Last 6 Months"/>}
+                {topSongsST && timeRange.id==="short_term" && <TopSongs topSongs={topSongsST.items} timeRange="Last 4 Weeks"/>}
+                {topSongsLT && timeRange.id==="long_term" && <TopSongs topSongs={topSongsLT.items} timeRange="All Time"/>}
+                {topArtistsMT && timeRange.id==="medium_term" && <TopArtists topArtists={topArtistsMT.items} timeRange="Last 6 Months"/>}
+                {topArtistsST && timeRange.id==="short_term" && <TopArtists topArtists={topArtistsST.items} timeRange="Last 4 Weeks"/>}
+                {topArtistsLT && timeRange.id==="long_term" && <TopArtists topArtists={topArtistsLT.items} timeRange="All Time"/>}
             </div>
         </div>
     );

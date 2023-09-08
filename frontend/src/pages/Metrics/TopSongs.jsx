@@ -1,8 +1,8 @@
-export default function TopSongs({topSongs}) {
+export default function TopSongs({topSongs, timeRange}) {
     return (
         <div className="w-[400px] mx-4">
-            <h1 className="text-[2.5rem] pt-6 font-bold">Top Songs</h1>
-            <p className="text-xl">(Last 6 Months)</p>
+            <h1 className="text-[2.5rem] font-bold">Top Songs</h1>
+            <p className="text-xl mb-6">({timeRange})</p>
             {topSongs.map((s, idx)=>(
                 <div className="flex gap-[10px] m-[0.5rem] bg-dark-gray rounded-sm">
                 <p className="my-auto pl-2 font-bold">{idx+1}</p>

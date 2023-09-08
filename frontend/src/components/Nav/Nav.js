@@ -5,7 +5,7 @@ import spotifyLogo from '../../spotify-icons/Spotify_Icon_RGB_Green.png'
 
 export default function Nav() {
     return (
-        <nav className="flex flex-col justify-start p-[1.5rem] bg-dark-gray h-full">
+        <nav className="flex flex-col justify-start p-[1.5rem] bg-[black] h-full">
             <img className="spotify-logo" src={spotifyLogo} alt="spotify logo in black"/>
             <Link className="nav-link font-bold" to="/">
                 Home
