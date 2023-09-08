@@ -50,27 +50,26 @@ export default function Home() {
 
             <div className="bg-white-smoke text-[black] min-h-[80vh] mx-auto">
                 <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View Spotify's audio analytics for the tracks in your saved playlists</h1>
-                <div className="mx-auto max-w-[600px] px-8">
-                <p className="text-xl my-4"> <span className="font-bold">Metrics</span> allows you to view the following audio features:  </p>
-                <ul className="text-left text-lg">
-                    <li>1. Tempo: The overall estimated tempo of a track in beats per minute (BPM).</li>
-                    <li>2. Time signature: The estimated time signature, which is a notational convention to specify how many beats are in each bar or measure.</li>
-                    <li>3. Bars: A segment of music that holds a given number of beats. A bar is a unit of time for a piece of music. </li>
-                    <li>4. Key: The estimated overall key of the track.</li>
-                    <li>5. Mode</li>
-                    <li>6. Loudness </li>
-                </ul>
+                <div className="mx-auto max-w-[720px] px-8">
+                    <p className="text-xl xl:text-2xl my-4"> <span className="font-bold">My Spotify Metrics</span> allows you to view the following audio features:  </p>
+                    <ul className="text-left pl-8 w-[600px] list-decimal xl:text-xl">
+                        <li><span className="font-bold">Tempo</span>: The overall estimated tempo of a track in beats per minute (BPM).</li>
+                        <li><span className="font-bold">Time signature</span>: The estimated time signature, which is a notational convention to specify how many beats are in each bar or measure.</li>
+                        <li><span className="font-bold">Bars</span>: A segment of music that holds a given number of beats. A bar is a unit of time for a piece of music. </li>
+                        <li><span className="font-bold">Key</span>: The estimated overall key of the track.</li>
+                        <li><span className="font-bold">Mode</span>: Indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived.</li>
+                        <li><span className="font-bold">Loudness</span>: The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track. Loudness is the quality of a sound that correlates to its physical strength (amplitude). Values typically range between -60 and 0 db.</li>
+                    </ul>
                 </div>
-{/* Beats Per Minute (BPM) - The tempo of the song.
-Energy - The energy of a song - the higher the value, the more energtic. song
-Danceability - The higher the value, the easier it is to dance to this song.
-Loudness - The higher the value, the louder the song.
-Valence - The higher the value, the more positive mood for the song.
-Length - The duration of the song.
-Acoustic - The higher the value the more acoustic the song is.
-Popularity - The higher the value the more popular the song is.
-A.Sep - maximizes the artist separation in the set
-Rnd - A randon number. Sort by this column to shuffle your playlist.</p> */}
+                <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View your top artists and top tracks based on your listening history</h1>
+                <div className="mx-auto max-w-[720px] px-8">
+                    <p className="text-xl xl:text-2xl my-4"><span className="font-bold">My Spotify Metrics</span> allows you to view your top songs and top artists for the following time ranges:</p>
+                    <ul className="text-left pl-8 w-[480px] list-disc xl:text-xl pb-12">
+                        <li><span className="font-bold">Long term</span>: calculated from several years of data and including all new data as it becomes available</li>
+                        <li><span className="font-bold">Medium term</span>: approximately the last 6 months</li>
+                        <li><span className="font-bold">Short term</span>: approximately the last 4 weeks</li>
+                    </ul>
+                </div>
             </div>
             
         
