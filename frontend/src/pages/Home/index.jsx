@@ -1,5 +1,6 @@
 import { getCurrentUserProfile } from '../../spotify'
 import { useState, useEffect } from 'react'
+import spotifyLogo from '../../spotify-icons/Spotify_Logo_RGB_White.png'
 
 export default function Home() {
     const [profile, setProfile] = useState(null);
@@ -23,12 +24,13 @@ export default function Home() {
         <div className="
         text-center
         h-full">
+       <div className="flex justify-center my-10">
+        <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
         <h1 className="
-        text-[2.25rem] 
-        font-bold
-        p-[2rem]">
-            Spotify Metrics
-        </h1>
+          text-[2.5rem] 
+          text-white">
+        <span className="px-2 font-light">|</span> Metrics</h1>
+        </div>
 
         {profile && (
             <div>
@@ -36,7 +38,7 @@ export default function Home() {
                 (<img className="
                 inline
                 mx-auto 
-                my-8 
+                my-4 
                 rounded-full 
                 h-[200px]
                 " 
@@ -51,7 +53,7 @@ export default function Home() {
                 src={profile.images[0].url} alt={profile.display_name}/>
                 )}
             <h1 className="
-                text-[2rem]
+                text-[2.25rem]
                 font-bold
                 p-[2rem]">
                 {profile.display_name} </h1>

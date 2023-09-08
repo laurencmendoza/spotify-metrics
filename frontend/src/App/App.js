@@ -5,6 +5,8 @@ import { accessToken } from '../spotify'
 // COMPONENTS
 import Nav from '../components/Nav/Nav';
 import { Route, Routes } from 'react-router-dom';
+import spotifyLogo from '../spotify-icons/Spotify_Logo_RGB_White.png'
+
 
 // PAGES
 import Home from '../pages/Home/';
@@ -27,13 +29,16 @@ export default function App() {
     <div className="App">
       {!token ? (
         <div className="text-center">
+          <div className="flex justify-center my-10">
+        <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
         <h1 className="
           text-[2.5rem] 
-          font-bold
-          my-[2rem]
           text-white">
-        Spotify Metrics</h1>
+        <span className="px-2 font-light">|</span> Metrics</h1>
+        </div>
         <button className="
+          block
+          mx-auto
           text-[white] 
           font-bold 
           bg-spotify-green 

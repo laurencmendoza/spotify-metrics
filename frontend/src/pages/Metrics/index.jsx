@@ -1,47 +1,79 @@
-import './Metrics.css'
-import { getTopArtists, getTopSongs } from '../../spotify'
-import { useState, useEffect } from 'react'
-import TopSongs from './TopSongs';
-import TopArtists from './TopArtists';
+import {
+  getTopArtistsMT,
+  getTopSongsMT,
+  getTopArtistsST,
+  getTopSongsST,
+  getTopArtistsLT,
+  getTopSongsLT,
+} from "../../spotify";
+import { useState, useEffect } from "react";
+import TopSongs from "./TopSongs";
+import TopArtists from "./TopArtists";
 
 export default function Metrics() {
-    const [topSongs, setTopSongs] = useState(null);
-    const [topArtists, setTopArtists] = useState(null);
+  const [topSongsMT, setTopSongsMT] = useState(null);
+  const [topSongsST, setTopSongsST] = useState(null);
+  const [topSongsLT, setTopSongsLT] = useState(null);
+  const [topArtistsMT, setTopArtistsMT] = useState(null);
+  const [topArtistsST, setTopArtistsST] = useState(null);
+  const [topArtistsLT, setTopArtistsLT] = useState(null);
 
-    async function handleTopSongRequest() {
-        try {
-            const {data} = await getTopSongs();
-            setTopSongs(data)
-            console.log(data)
-        } catch (err) {
-            console.log(err)
-        }
+  async function handleTopSongRequestMT() {
+    try {
+      const { data } = await getTopSongsMT();
+      setTopSongsMT(data);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
     }
+  }
 
-    async function handleTopArtistRequest() {
-        try {
-            const {data} = await getTopArtists();
-            setTopArtists(data)
-            console.log(data)
-        } catch (err) {
-            console.log(err)
-        }
+  async function handleTopSongRequestST() {
+    try {
+      const { data } = await getTopSongsST();
+      setTopSongsST(data);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
     }
+  }
 
-    useEffect(()=> {
-        handleTopSongRequest();
-        handleTopArtistRequest();
-    }, [])
+  async function handleTopArtistRequestMT() {
+    try {
+      const { data } = await getTopArtistsMT();
+      setTopArtistsMT(data);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
+  async function handleTopArtistRequestMT() {
+    try {
+      const { data } = await getTopArtistsMT();
+      setTopArtistsMT(data);
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
-    return (
-        <div className="metrics">
-        {topSongs && (
-            <TopSongs topSongs={topSongs.items}/>
-        )}
-        {topArtists && (
-            <TopArtists topArtists={topArtists.items}/>
-        )}
-        </div>
-    )
+  useEffect(() => {
+    handleTopSongRequestMT();
+    handleTopArtistRequestMT();
+  }, []);
+
+  return (
+    <div className="flex flex-col">
+      <nav className="flex border-[red] border-[1px]">
+        <a>All Time</a>
+        <a>Last 6 Months</a>
+        <a>Last 4 Weeks</a>
+      </nav>
+      <div className="flex justify-evenly">
+        {topSongsMT && <TopSongs topSongs={topSongsMT.items} />}
+        {topArtistsMT && <TopArtists topArtists={topArtistsMT.items} />}
+      </div>
+    </div>
+  );
 }
