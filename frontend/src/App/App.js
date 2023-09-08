@@ -30,34 +30,29 @@ export default function App() {
       {!token ? (
         <div className="text-center">
           <div className="flex justify-center my-10">
-        <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
-        <h1 className="
-          text-[2.5rem] 
-          text-white">
-        <span className="px-2 font-light">|</span> Metrics</h1>
-        </div>
-        <button className="
-          block
-          mx-auto
-          text-[white] 
-          font-bold 
-          bg-spotify-green 
-          rounded-3xl 
-          h-[3rem] 
-          py-0 
-          px-[24px] 
-          divide-none 
-          hover:scale-[1.02]">
-        <a href={LOGIN_URI} 
-        className="text-xl">
-        LOG IN TO SPOTIFY
-        </a>
-        </button>
+            <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
+            <h1 className="text-[2.5rem] text-white">
+              <span className="px-2 font-light">|</span>
+              Metrics
+            </h1>
+          </div>
+          <button className="
+            block
+            mx-auto
+            text-[white] 
+            font-bold 
+            bg-spotify-green 
+            rounded-3xl 
+            h-[3rem] 
+            py-0 
+            px-[24px] 
+            divide-none 
+            hover:scale-[1.02]">
+            <a href={LOGIN_URI} className="text-xl">LOG IN TO SPOTIFY</a>
+          </button>
         </div>
       ) : (
-        <div className="
-          flex 
-          min-h-[100vh]">
+        <div className="flex min-h-[100vh]">
           <div className="w-[220px]">
             <Nav/>
           </div>
