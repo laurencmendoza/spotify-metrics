@@ -1,19 +1,17 @@
-import PlaylistAudioAnalysis from "./PlaylistAudioAnalysis"
+import PlaylistAudioAnalysis from './PlaylistAudioAnalysis'
 
 export default function PlaylistTracks({tracks}) {
-
-
     const tableData = tracks.map((t, idx)=> (
         <tr>
             <td className="p-track">
                 <span className="p-track-name">
                 {t.track.name} 
                 </span>
-            <p className="text-[.9rem] flex gap-[1rem] text-[lightgray]">
+            <p className="text-[.9rem] flex gap-[.5rem] text-[lightgray]">
                 <span>
                 {t.track.artists[0].name}
                 </span> ·
-                <span>
+                <span className="mr-1">
                 {t.track.album.name}
                 </span>
             </p>
@@ -21,6 +19,9 @@ export default function PlaylistTracks({tracks}) {
             <PlaylistAudioAnalysis trackId={t.track.id}/>
         </tr>
     ))
+    const arrayOfKeys = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B']
+
+    const arrayOfModes = ['minor', 'major']
 
 
     return (
@@ -40,7 +41,6 @@ export default function PlaylistTracks({tracks}) {
                 <tbody>
                     {tableData}
                 </tbody>
-                
             </table>
         </div>
     )
