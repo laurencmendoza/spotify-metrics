@@ -8,13 +8,17 @@ export default function TopSongs({topSongs, timeRange}) {
                 <p className="my-auto pl-2 font-bold xl:text-xl">{idx+1}</p>
                 <a className="my-auto hover:underline hover:underline-offset-2" target="_blank" href={s.external_urls.spotify}>
                 <img 
-                    className="h-[50px] w-auto m-2" 
+                    className="h-[50px] w-auto my-2" 
                     src={s.album.images[0].url} 
                     alt={s.album.name}
                 />
                 </a>
-                <p className="xl:text-xl">{s.name}</p>
-                
+                <div className="my-auto">
+                <p className="xl:text-xl">
+                    {s.name}
+                </p>
+                <p className="text-[lightgray] text-sm"> {s.artists[0].name}</p>
+                </div>
                 </div>
             ))}
         </div>

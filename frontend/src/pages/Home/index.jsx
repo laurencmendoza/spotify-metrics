@@ -48,7 +48,7 @@ export default function Home() {
                 </h1>
             </div>
             )}
-        <button className="block mx-auto mb-10 rounded-full border-[2px] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
+        <button className="block mx-auto mb-10 rounded-full border-[2px] border-[white] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
             LOG OUT
         </button>
             <div className="bg-white-smoke text-[black] min-h-[80vh] mx-auto">
