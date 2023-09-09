@@ -19,10 +19,6 @@ export default function PlaylistTracks({tracks}) {
             <PlaylistAudioAnalysis trackId={t.track.id}/>
         </tr>
     ))
-    const arrayOfKeys = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B']
-
-    const arrayOfModes = ['minor', 'major']
-
 
     return (
         <div className="mx-10">

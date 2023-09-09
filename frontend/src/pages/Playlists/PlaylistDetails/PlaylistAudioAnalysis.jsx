@@ -7,7 +7,6 @@ export default function PlaylistAudioAnalysis({trackId}) {
         try {
             const {data} = await getAudioAnalysis(trackId);
             setAudioAnalysis(data)
-            console.log(data)
         } catch(err) {
             console.log(err)
         }
