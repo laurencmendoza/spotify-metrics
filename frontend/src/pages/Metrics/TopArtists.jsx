@@ -8,7 +8,7 @@ export default function TopArtists({ topArtists, timeRange }) {
                 <p className="my-auto pl-2 font-bold xl:text-xl">{idx + 1}</p>
                 <a className="my-auto hover:underline hover:underline-offset-2" target="_blank" href={a.external_urls.spotify}>
                 <img 
-                    className="h-[50px] w-auto my-2"
+                    className="h-[50px] min-w-[50px] w-auto my-2"
                     src={a.images[0].url}
                     alt={a.name}
                 />
