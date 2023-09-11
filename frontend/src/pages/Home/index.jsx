@@ -1,15 +1,15 @@
-import { getCurrentUserProfile } from '../../spotify'
 import { useState, useEffect } from 'react'
+import { logout } from '../../spotify'
+import { getCurrentUserProfile } from '../../spotify'
+import Loading from '../../components/Loader/Loading'
 import spotifyLogo from '../../spotify-icons/Spotify_Logo_RGB_White.png'
-import { logout } from '../../spotify';
-import Loading from '../../components/Loader/Loading';
 
 export default function Home() {
-    const [profile, setProfile] = useState(null);
+    const [profile, setProfile] = useState(null)
 
     async function handleProfileRequest() {
         try {
-            const {data} = await getCurrentUserProfile();
+            const {data} = await getCurrentUserProfile()
             setProfile(data)
         } catch (err) {
             console.log(err)
@@ -18,9 +18,8 @@ export default function Home() {
     }
 
     useEffect(() => {
-        handleProfileRequest();
+        handleProfileRequest()
     }, [])
-
 
     return (
         <div className="h-full">
@@ -78,8 +77,6 @@ export default function Home() {
                     </ul>
                 </div>
             </div>
-            
-        
         </div>
     )
 }

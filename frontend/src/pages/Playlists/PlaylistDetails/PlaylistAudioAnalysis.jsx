@@ -1,9 +1,9 @@
 import { getAudioAnalysis } from "../../../spotify"
 import { useState, useEffect } from 'react'
-import Spinner from "../../../components/Loader/Spinner";
+import Spinner from "../../../components/Loader/Spinner"
 
 export default function PlaylistAudioAnalysis({trackId}) {
-    const [audioAnalysis, setAudioAnalysis] = useState(null);
+    const [audioAnalysis, setAudioAnalysis] = useState(null)
     async function handleAnalysisRequest() {
         try {
             const {data} = await getAudioAnalysis(trackId);
@@ -14,7 +14,7 @@ export default function PlaylistAudioAnalysis({trackId}) {
     }
 
     useEffect(()=> {
-        handleAnalysisRequest();
+        handleAnalysisRequest()
     }, [])
 
     const arrayOfKeys = ['C', 'C♯', 'D', 'E♭', 'E', 'F', 'F♯', 'G', 'A♭', 'A', 'B♭', 'B']

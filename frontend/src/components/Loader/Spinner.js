@@ -5,5 +5,5 @@ export default function Spinner() {
         <div className="spinner text-center mx-auto">
             <span className="hidden">Loading...</span>
         </div>
-    );
+    )
 }

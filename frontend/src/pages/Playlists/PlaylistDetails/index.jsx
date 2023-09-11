@@ -1,18 +1,18 @@
 import { getPlaylistTracks, getPlaylist } from "../../../spotify"
 import { useState, useEffect } from 'react'
-import { useParams } from "react-router";
-import PlaylistTracks from "./PlaylistTracks";
-import Loading from "../../../components/Loader/Loading";
+import { useParams } from "react-router"
+import PlaylistTracks from "./PlaylistTracks"
+import Loading from "../../../components/Loader/Loading"
 
 
 export default function PlaylistDetails() {
-    const [playlist, setPlaylist] = useState(null);
-    const [playlistTracks, setPlaylistTracks] = useState(null);
-    const { id } = useParams();
+    const [playlist, setPlaylist] = useState(null)
+    const [playlistTracks, setPlaylistTracks] = useState(null)
+    const { id } = useParams()
 
     async function handleTrackRequest() {
         try {
-            const {data} = await getPlaylistTracks(id);
+            const {data} = await getPlaylistTracks(id)
             setPlaylistTracks(data)
             console.log(data)
         } catch (err) {
@@ -22,7 +22,7 @@ export default function PlaylistDetails() {
 
     async function handlePlaylistRequest() {
         try {
-            const {data} = await getPlaylist(id);
+            const {data} = await getPlaylist(id)
             setPlaylist(data)
             console.log(data)
         } catch (err) {
@@ -31,8 +31,8 @@ export default function PlaylistDetails() {
     }
 
     useEffect(()=> {
-        handleTrackRequest();
-        handlePlaylistRequest();
+        handleTrackRequest()
+        handlePlaylistRequest()
     }, [])
 
     return (

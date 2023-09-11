@@ -5,87 +5,87 @@ import {
     getTopSongsST,
     getTopArtistsLT,
     getTopSongsLT,
-} from "../../spotify";
-import { useState, useEffect } from "react";
-import TopSongs from "./TopSongs";
-import TopArtists from "./TopArtists";
+} from "../../spotify"
+import { useState, useEffect } from "react"
+import TopSongs from "./TopSongs"
+import TopArtists from "./TopArtists"
 import { Link, useParams } from 'react-router-dom'
-import Loading from "../../components/Loader/Loading";
+import Loading from "../../components/Loader/Loading"
 
 export default function Metrics() {
-    const [topSongsMT, setTopSongsMT] = useState(null);
-    const [topSongsST, setTopSongsST] = useState(null);
-    const [topSongsLT, setTopSongsLT] = useState(null);
-    const [topArtistsMT, setTopArtistsMT] = useState(null);
-    const [topArtistsST, setTopArtistsST] = useState(null);
-    const [topArtistsLT, setTopArtistsLT] = useState(null);
-    const timeRange = useParams();
+    const [topSongsMT, setTopSongsMT] = useState(null)
+    const [topSongsST, setTopSongsST] = useState(null)
+    const [topSongsLT, setTopSongsLT] = useState(null)
+    const [topArtistsMT, setTopArtistsMT] = useState(null)
+    const [topArtistsST, setTopArtistsST] = useState(null)
+    const [topArtistsLT, setTopArtistsLT] = useState(null)
+    const timeRange = useParams()
 
     async function handleTopSongRequestMT() {
         try {
-            const { data } = await getTopSongsMT();
-            setTopSongsMT(data);
+            const { data } = await getTopSongsMT()
+            setTopSongsMT(data)
             console.log(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
     async function handleTopSongRequestST() {
         try {
-            const { data } = await getTopSongsST();
-            setTopSongsST(data);
+            const { data } = await getTopSongsST()
+            setTopSongsST(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
     async function handleTopSongRequestLT() {
         try {
-            const { data } = await getTopSongsLT();
-            setTopSongsLT(data);
+            const { data } = await getTopSongsLT()
+            setTopSongsLT(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
 
     async function handleTopArtistRequestMT() {
         try {
-            const { data } = await getTopArtistsMT();
-            setTopArtistsMT(data);
+            const { data } = await getTopArtistsMT()
+            setTopArtistsMT(data)
             console.log(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
     async function handleTopArtistRequestST() {
         try {
-            const { data } = await getTopArtistsST();
-            setTopArtistsST(data);
+            const { data } = await getTopArtistsST()
+            setTopArtistsST(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
     async function handleTopArtistRequestLT() {
         try {
-            const { data } = await getTopArtistsLT();
-            setTopArtistsLT(data);
+            const { data } = await getTopArtistsLT()
+            setTopArtistsLT(data)
         } catch (err) {
-            console.log(err);
+            console.log(err)
         }
     }
 
 
     useEffect(() => {
-        handleTopSongRequestMT();
-        handleTopSongRequestST();
-        handleTopSongRequestLT();
-        handleTopArtistRequestMT();
-        handleTopArtistRequestST();
-        handleTopArtistRequestLT();
+        handleTopSongRequestMT()
+        handleTopSongRequestST()
+        handleTopSongRequestLT()
+        handleTopArtistRequestMT()
+        handleTopArtistRequestST()
+        handleTopArtistRequestLT()
     }, []);
 
     return (

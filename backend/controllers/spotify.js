@@ -63,22 +63,16 @@ function callback(req, res) {
     })
     .then(response => {
         if (response.status === 200) {
-    
             const { access_token, refresh_token, expires_in } = response.data;
-
-
 
             const queryParams = querystring.stringify({
                 access_token,
                 refresh_token,
                 expires_in,
             })
-
             // redirect to react app
             res.redirect(`${FRONTEND_URI}/?${queryParams}`)
-
             // pass along tokens in query params
-
         } else {
             res.redirect(`/?${querystring.stringify( {error: 'invalid_token'})}`);
         }

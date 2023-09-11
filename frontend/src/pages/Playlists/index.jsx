@@ -1,15 +1,15 @@
 import './Playlists.css'
 import { getMyPlaylists } from '../../spotify'
 import { useState, useEffect } from 'react'
-import Playlist from './Playlist';
-import Loading from '../../components/Loader/Loading';
+import Playlist from './Playlist'
+import Loading from '../../components/Loader/Loading'
 
 export default function Playlists() {
-    const [playlists, setPlaylists] = useState(null);
+    const [playlists, setPlaylists] = useState(null)
     
     async function handlePlaylistRequest() {
         try {
-            const {data} = await getMyPlaylists();
+            const {data} = await getMyPlaylists()
             setPlaylists(data)
             console.log(data)
         } catch (err) {
@@ -18,7 +18,7 @@ export default function Playlists() {
     }
 
     useEffect(()=> {
-        handlePlaylistRequest();
+        handlePlaylistRequest()
     }, [])
 
     return (
