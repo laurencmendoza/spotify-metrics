@@ -5,14 +5,16 @@ export default function TopArtists({ topArtists, timeRange }) {
             <p className="sm:text-xl mb-6 pl-2">({timeRange})</p>
             {topArtists.map((a, idx) => (
             <div className="flex gap-[10px] m-[0.5rem] bg-dark-gray rounded-sm">
-                <p className="my-auto pl-2 font-bold xl:text-xl">{idx + 1}</p>
+                {idx < 9 ? (<p className="my-auto pl-2 font-bold mr-2">{idx+1}</p>) : (
+                        <p className="my-auto pl-2 font-bold">{idx+1}</p>
+                    )}
                 <img 
                     className="h-[50px] min-w-[50px] w-auto my-2"
                     src={a.images[0].url}
                     alt={a.name}
                 />
                 <a className="my-auto hover:underline hover:underline-offset-2" target="_blank" href={a.external_urls.spotify}>
-                    <p className="xl:text-xl my-auto">{a.name}</p>
+                    <p className="xl:text-lg my-auto">{a.name}</p>
                 </a>
             </div>
             ))}
