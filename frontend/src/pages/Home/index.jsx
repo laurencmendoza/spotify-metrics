@@ -34,16 +34,17 @@ export default function Home() {
         <div className="text-center">
         {profile ? (
             <>
-                {profile.images[1] ? 
-                (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
+                {profile.images[1] ? (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
                     src={profile.images[1].url} 
-                    alt={profile.display_name}/>)
-                : 
-                (<img className="inline mx-auto my-0 rounded-full h-[75px]" 
-                    src={profile.images[0].url} 
                     alt={profile.display_name}/>
-                )}
-                
+                ) : (profile.images[0]) ? (<img className="inline mx-auto my-0 rounded-full h-[75px]" 
+                src={profile.images[0].url} 
+                alt={profile.display_name}/>
+                ) : 
+                (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
+                    src="https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg"
+                    alt="profile placeholder"/>)
+                }
                 <h1 className="text-[1.5rem] sm:text-[2.25rem] font-bold p-[2rem] ">
                     {profile.display_name} 
                 </h1>
