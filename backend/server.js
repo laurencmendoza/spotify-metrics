@@ -3,10 +3,10 @@
 ////////////////////////////////
 
 // initialize .env variables
-require("dotenv").config();
+require('dotenv').config();
 
-// pull PORT from .env, give default value of 4000 and establish DB Connection
 const PORT = process.env.PORT || 8888;
+
 
 // import express
 const express = require('express');

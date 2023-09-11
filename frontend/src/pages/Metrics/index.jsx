@@ -10,6 +10,7 @@ import { useState, useEffect } from "react";
 import TopSongs from "./TopSongs";
 import TopArtists from "./TopArtists";
 import { Link, useParams } from 'react-router-dom'
+import Loading from "../../components/Spinner/Spinner";
 
 export default function Metrics() {
     const [topSongsMT, setTopSongsMT] = useState(null);
@@ -95,10 +96,10 @@ export default function Metrics() {
                 <Link to="/metrics/short_term" className="hover:underline hover:text-[white] underline-offset-4 sm:pr-10 text-[lightgray]">Last 4 Weeks</Link>
             </nav>
             <div className="flex flex-col lg:flex-row gap-[3rem] justify-between mt-6 mx-auto my-10">
-                {topSongsMT && timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} timeRange="Last 6 Months"/>}
+                {topSongsMT ? (timeRange.id==="medium_term" && <TopSongs topSongs={topSongsMT.items} timeRange="Last 6 Months"/>) : (<Loading/>)}
                 {topSongsST && timeRange.id==="short_term" && <TopSongs topSongs={topSongsST.items} timeRange="Last 4 Weeks"/>}
                 {topSongsLT && timeRange.id==="long_term" && <TopSongs topSongs={topSongsLT.items} timeRange="All Time"/>}
-                {topArtistsMT && timeRange.id==="medium_term" && <TopArtists topArtists={topArtistsMT.items} timeRange="Last 6 Months"/>}
+                {topArtistsMT ? (timeRange.id==="medium_term" && <TopArtists topArtists={topArtistsMT.items} timeRange="Last 6 Months"/>) : (<Loading/>)}
                 {topArtistsST && timeRange.id==="short_term" && <TopArtists topArtists={topArtistsST.items} timeRange="Last 4 Weeks"/>}
                 {topArtistsLT && timeRange.id==="long_term" && <TopArtists topArtists={topArtistsLT.items} timeRange="All Time"/>}
             </div>

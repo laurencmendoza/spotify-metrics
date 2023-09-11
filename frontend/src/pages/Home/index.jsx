@@ -2,6 +2,7 @@ import { getCurrentUserProfile } from '../../spotify'
 import { useState, useEffect } from 'react'
 import spotifyLogo from '../../spotify-icons/Spotify_Logo_RGB_White.png'
 import { logout } from '../../spotify';
+import Loading from '../../components/Spinner/Spinner';
 
 export default function Home() {
     const [profile, setProfile] = useState(null);
@@ -30,9 +31,9 @@ export default function Home() {
                     Metrics
                 </h1>
             </div>
-
-        {profile && (
-            <div className="text-center">
+        <div className="text-center">
+        {profile ? (
+            <>
                 {profile.images[1] ? 
                 (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
                     src={profile.images[1].url} 
@@ -46,8 +47,10 @@ export default function Home() {
                 <h1 className="text-[1.5rem] sm:text-[2.25rem] font-bold p-[2rem] ">
                     {profile.display_name} 
                 </h1>
+            </>
+            ) :
+            (<Loading/>)}
             </div>
-            )}
         <button className="block mx-auto mb-10 rounded-full border-[2px] border-[white] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
             LOG OUT
         </button>

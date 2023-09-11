@@ -2,6 +2,8 @@ import { getPlaylistTracks, getPlaylist } from "../../../spotify"
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router";
 import PlaylistTracks from "./PlaylistTracks";
+import Loading from "../../../components/Spinner/Spinner";
+
 
 export default function PlaylistDetails() {
     const [playlist, setPlaylist] = useState(null);
@@ -35,11 +37,12 @@ export default function PlaylistDetails() {
 
     return (
         <div>
-            <div className="my-10 sm:m-10 sm:flex justify-center">
+            <div className="my-10 sm:m-10 sm:flex lg:mx-auto lg:max-w-screen-md">
             {playlist ? (
-                <img className="h-[240px] mx-auto sm:mx-0" src={playlist.images[0].url} alt={playlist.name}/>
+                playlist.images[0] ? (<img className="h-[240px] mx-auto sm:mx-0" src={playlist.images[0].url} alt={playlist.name}/>) 
+                : (<img className="h-[240px] mx-auto sm:mx-0 bg-[white]" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png"/>)
             ) : (
-                <img className="h-[240px] mx-auto sm:mx-0 bg-[white]" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png"/>
+                <Loading/>
             )}
             
                 <div className="m-10">

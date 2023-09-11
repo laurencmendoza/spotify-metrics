@@ -2,6 +2,7 @@ import './Playlists.css'
 import { getMyPlaylists } from '../../spotify'
 import { useState, useEffect } from 'react'
 import Playlist from './Playlist';
+import Loading from '../../components/Spinner/Spinner';
 
 export default function Playlists() {
     const [playlists, setPlaylists] = useState(null);
@@ -22,11 +23,11 @@ export default function Playlists() {
 
     return (
 
-        <div className="sm:m-[3rem]">
-            <h1 className="text-center sm:text-left text-[2rem] font-bold mb-4 mt-8">Your Playlists</h1>
-        {playlists && (
+        <div className="sm:m-[3rem] text-center">
+            <h1 className="sm:text-left text-[2rem] font-bold mb-4 mt-8">Your Playlists</h1>
+        {playlists ? (
             <Playlist playlists={playlists}/>
-        )}
+        ) : (<Loading/>)}
         </div>
     )
 }
