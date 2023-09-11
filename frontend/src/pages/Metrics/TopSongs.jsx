@@ -6,17 +6,15 @@ export default function TopSongs({topSongs, timeRange}) {
             {topSongs.map((s, idx)=>(
                 <div className="flex gap-[10px] m-[0.5rem] bg-dark-gray rounded-sm">
                 <p className="my-auto pl-2 font-bold xl:text-xl">{idx+1}</p>
-                <a className="my-auto hover:underline hover:underline-offset-2" target="_blank" href={s.external_urls.spotify}>
                 <img 
                     className="h-[50px] min-w-[50px] my-2" 
                     src={s.album.images[0].url} 
                     alt={s.album.name}
                 />
-                </a>
                 <div className="my-auto">
-                    <p className="xl:text-xl">
-                        {s.name}
-                    </p>
+                    <a className="my-auto hover:underline hover:underline-offset-2" target="_blank" href={s.external_urls.spotify}>
+                        <p className="xl:text-xl">{s.name}</p>
+                    </a>
                     <p className="text-[lightgray] text-sm mr-2"> {`${s.artists[0].name}`} {s.artists[1] && (`& ${s.artists[1].name}`)}</p>
                 </div>
                 </div>
