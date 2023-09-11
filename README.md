@@ -46,6 +46,8 @@
 
 ## Getting Started 
 
+This application is still in Development Mode, so if you would like to test the application, contact me at lauren.camille.mendoza@gmail.com and provide me with the email address that you use to log in to Spotify. I will allow access to your account so you can view your Spotify account information in the application. 
+
 Click [here](https://my-spotify-metrics-bab64fc6f36f.herokuapp.com/) to open the app!
 
 ## Future Features
@@ -60,5 +62,6 @@ Click [here](https://my-spotify-metrics-bab64fc6f36f.herokuapp.com/) to open the
 
 ## Known Issues
 
+- Application needs to be approved through Spotify to allow for an extended quota of users, which will allow all Spotify users to log in to the application and view their data
 - After an hour, access key resets, and user is not be able to see information from Spotify's API without manually refreshing the page
 
