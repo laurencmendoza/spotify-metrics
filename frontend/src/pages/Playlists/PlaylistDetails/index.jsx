@@ -59,9 +59,8 @@ export default function PlaylistDetails() {
                     
                 </div>
             </div>
-            {playlistTracks && (
-                <PlaylistTracks tracks={playlistTracks.items}/>
-            )}
+            {playlistTracks &&
+                <PlaylistTracks tracks={playlistTracks.items}/>}
         </div>
     )
 }
