@@ -44,7 +44,7 @@ export default function PlaylistDetails() {
                     <div className="m-10">
                         <h1 className="text-center mb-10 text-[1.5rem] sm:text-[1.75rem] font-bold">{playlist.name}</h1>
                         <a href={playlist.external_urls.spotify} target="_blank">
-                            <button className="block mx-auto text-[white] font-bold bg-spotify-green rounded-3xl h-[3rem] py-0 px-[24px] divide-none hover:scale-[1.02]">
+                            <button className="block mx-auto text-[white] font-bold bg-spotify-green rounded-3xl h-[3rem] w-[210px] py-0 px-[24px] divide-none hover:scale-[1.02]">
                                 LISTEN ON SPOTIFY
                             </button>
                         </a>
