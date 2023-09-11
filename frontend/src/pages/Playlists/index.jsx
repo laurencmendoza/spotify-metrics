@@ -11,7 +11,6 @@ export default function Playlists() {
         try {
             const {data} = await getMyPlaylists()
             setPlaylists(data)
-            console.log(data)
         } catch (err) {
             console.log(err)
         }

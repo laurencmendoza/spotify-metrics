@@ -23,21 +23,18 @@ export default function PlaylistAudioAnalysis({trackId}) {
 
     return (
         <>
-        {audioAnalysis ? (
-        <>
+        {audioAnalysis ? 
+        (<>
         <td>{Math.round(audioAnalysis.track.tempo)}</td>
         <td>{audioAnalysis.track.time_signature}</td>
         <td>{audioAnalysis.bars.length}</td>
         <td>{audioAnalysis.track.key>-1 ? (arrayOfKeys[audioAnalysis.track.key]) : ("no key detected")}</td>
         <td>{arrayOfModes[audioAnalysis.track.mode]}</td>
         <td>{audioAnalysis.track.loudness} dB</td>
-        </>
-        ) :
-        (
-        <>
+        </>) 
+        : (<>
         <td colSpan="6" className="text-center"> <Spinner/> </td>
-        </>
-        )}
+        </>)}
         </>
     )
 }

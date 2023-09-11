@@ -14,7 +14,6 @@ export default function Home() {
         } catch (err) {
             console.log(err)
         }
-        
     }
 
     useEffect(() => {
@@ -30,8 +29,8 @@ export default function Home() {
                     Metrics
                 </h1>
             </div>
-        <div className="text-center">
-        {profile ? (
+            <div className="text-center">
+            {profile ? (
             <>
                 {profile.images[1] ? (<img className="inline mx-auto my-4 rounded-full h-[160px] sm:h-[200px]" 
                     src={profile.images[1].url} 
@@ -51,9 +50,9 @@ export default function Home() {
             ) :
             (<Loading/>)}
             </div>
-        <button className="block mx-auto mb-10 rounded-full border-[2px] border-[white] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
-            LOG OUT
-        </button>
+            <button className="block mx-auto mb-10 rounded-full border-[2px] border-[white] py-[5px] px-[20px] hover:bg-white hover:text-dark-gray text-lg" onClick={logout}>
+                LOG OUT
+            </button>
             <div className="bg-white-smoke text-[black] min-h-[80vh] mx-auto">
                 <h1 className="text-2xl font-bold pt-10 pb-4 text-center px-4">View Spotify's audio analytics for the tracks in your saved playlists</h1>
                 <div className="mx-auto max-w-[720px] px-8">

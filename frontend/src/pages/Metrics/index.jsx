@@ -25,7 +25,6 @@ export default function Metrics() {
         try {
             const { data } = await getTopSongsMT()
             setTopSongsMT(data)
-            console.log(data)
         } catch (err) {
             console.log(err)
         }
@@ -49,12 +48,10 @@ export default function Metrics() {
         }
     }
 
-
     async function handleTopArtistRequestMT() {
         try {
             const { data } = await getTopArtistsMT()
             setTopArtistsMT(data)
-            console.log(data)
         } catch (err) {
             console.log(err)
         }
@@ -77,7 +74,6 @@ export default function Metrics() {
             console.log(err)
         }
     }
-
 
     useEffect(() => {
         handleTopSongRequestMT()

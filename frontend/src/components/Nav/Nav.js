@@ -16,7 +16,6 @@ export default function Nav() {
                 Metrics
             </Link>
         </nav>
-        
     </div>
     )
 }

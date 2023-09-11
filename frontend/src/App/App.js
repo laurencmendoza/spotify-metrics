@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react'
 import { accessToken } from '../spotify'
 
-
 // COMPONENTS
 import Nav from '../components/Nav/Nav'
 import { Route, Routes } from 'react-router-dom'
 import spotifyLogo from '../spotify-icons/Spotify_Logo_RGB_White.png'
-
 
 // PAGES
 import Home from '../pages/Home/'

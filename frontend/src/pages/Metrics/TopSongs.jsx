@@ -4,10 +4,9 @@ export default function TopSongs({topSongs, timeRange}) {
             <h1 className="text-[1.75rem] sm:text-[2.5rem] font-bold pl-2">Top Songs</h1>
             <p className="sm:text-xl mb-6 pl-2">({timeRange})</p>
             {topSongs.map((s, idx)=>(
-                <div className="flex gap-[10px] m-[0.5rem] bg-dark-gray rounded-sm">
-                    {idx < 9 ? (<p className="my-auto pl-2 font-bold mr-2">{idx+1}</p>) : (
-                        <p className="my-auto pl-2 font-bold">{idx+1}</p>
-                    )}
+            <div className="flex gap-[10px] m-[0.5rem] bg-dark-gray rounded-sm">
+                {idx < 9 ? (<p className="my-auto pl-2 font-bold mr-2">{idx+1}</p>) : (
+                            <p className="my-auto pl-2 font-bold">{idx+1}</p>)}
                 <img 
                     className="h-[50px] min-w-[50px] my-2" 
                     src={s.album.images[0].url} 
@@ -19,7 +18,7 @@ export default function TopSongs({topSongs, timeRange}) {
                     </a>
                     <p className="text-[lightgray] text-sm mr-2"> {`${s.artists[0].name}`} {s.artists[1] && (`& ${s.artists[1].name}`)}</p>
                 </div>
-                </div>
+            </div>
             ))}
         </div>
     )
