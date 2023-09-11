@@ -36,8 +36,8 @@ export default function PlaylistDetails() {
     }, [])
 
     return (
-        <div className="2xl:flex">
-            <div className="my-10 sm:m-10 sm:mx-auto">
+        <div className="2xl:flex 2xl:justify-center">
+            <div className="my-10 sm:m-10">
             {playlist ? (
                 playlist.images[0] ? (<img className="h-[240px] mx-auto sm:mx-0" src={playlist.images[0].url} alt={playlist.name}/>) 
                 : (<img className="h-[240px] mx-auto sm:mx-0 bg-[white]" src="https://cdnweb.anghami.com/web/assets/img/placeholders/playlist-placeholder.png"/>)
