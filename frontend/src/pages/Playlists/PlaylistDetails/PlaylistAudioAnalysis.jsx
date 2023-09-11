@@ -1,6 +1,6 @@
 import { getAudioAnalysis } from "../../../spotify"
 import { useState, useEffect } from 'react'
-import Loading from "../../../components/Spinner/Spinner";
+import Spinner from "../../../components/Loader/Spinner";
 
 export default function PlaylistAudioAnalysis({trackId}) {
     const [audioAnalysis, setAudioAnalysis] = useState(null);
@@ -35,7 +35,7 @@ export default function PlaylistAudioAnalysis({trackId}) {
         ) :
         (
         <>
-        <td colSpan="6" className="text-center"> <Loading/> </td>
+        <td colSpan="6" className="text-center"> <Spinner/> </td>
         </>
         )}
         </>

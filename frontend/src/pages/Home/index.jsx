@@ -2,7 +2,7 @@ import { getCurrentUserProfile } from '../../spotify'
 import { useState, useEffect } from 'react'
 import spotifyLogo from '../../spotify-icons/Spotify_Logo_RGB_White.png'
 import { logout } from '../../spotify';
-import Loading from '../../components/Spinner/Spinner';
+import Loading from '../../components/Loader/Loading';
 
 export default function Home() {
     const [profile, setProfile] = useState(null);

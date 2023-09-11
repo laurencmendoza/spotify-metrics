@@ -2,7 +2,7 @@ import './Playlists.css'
 import { getMyPlaylists } from '../../spotify'
 import { useState, useEffect } from 'react'
 import Playlist from './Playlist';
-import Loading from '../../components/Spinner/Spinner';
+import Loading from '../../components/Loader/Loading';
 
 export default function Playlists() {
     const [playlists, setPlaylists] = useState(null);
