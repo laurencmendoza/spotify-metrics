@@ -22,7 +22,7 @@ export default function PlaylistTracks({tracks}) {
 
     return (
         <div className="mx-10">
-            <table className="mx-auto border-collapse m-[50px] xl:text-lg">
+            <table className="mx-auto border-collapse my-10 xl:text-lg">
                 <thead>
                 <tr>
                     <th className="min-w-[260px]">Track</th>
