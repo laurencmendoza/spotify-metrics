@@ -28,8 +28,8 @@ export default function App() {
       {!token ? (
         <div className="text-center">
           <div className="flex justify-center my-10">
-            <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
-            <h1 className="text-[2.5rem] text-white">
+            <img className="h-[3rem] sm:h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
+            <h1 className="text-[2rem] sm:text-[2.5rem] text-white">
               <span className="px-2 font-light">|</span>
               My Metrics
             </h1>
