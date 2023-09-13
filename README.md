@@ -48,7 +48,7 @@
 
 This application is still in Development Mode, so if you would like to test the application, contact me at lauren.camille.mendoza@gmail.com and provide me with the email address that you use to log in to Spotify. I will allow access to your account so you can view your Spotify account information in the application. 
 
-Click [here](https://my-spotify-metrics-bab64fc6f36f.herokuapp.com/) to open the app!
+Click [here](https://my-metrics-app-743645bb0090.herokuapp.com/) to open the app!
 
 ## Future Features
 
