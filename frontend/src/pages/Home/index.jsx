@@ -26,7 +26,7 @@ export default function Home() {
                 <img className="h-[3rem] sm:h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
                 <h1 className="text-[2rem] sm:text-[2.5rem] text-white">
                     <span className="px-2 font-light">|</span> 
-                    Metrics
+                    My Metrics
                 </h1>
             </div>
             <div className="text-center">

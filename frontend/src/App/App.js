@@ -31,7 +31,7 @@ export default function App() {
             <img className="h-[4rem]" src={spotifyLogo} alt="white Spotify logo"/>
             <h1 className="text-[2.5rem] text-white">
               <span className="px-2 font-light">|</span>
-              Metrics
+              My Metrics
             </h1>
           </div>
           <button className="block mx-auto mb-10 text-[white] font-bold bg-spotify-green rounded-3xl h-[3rem] py-0 px-[24px] divide-none hover:scale-[1.02]">
