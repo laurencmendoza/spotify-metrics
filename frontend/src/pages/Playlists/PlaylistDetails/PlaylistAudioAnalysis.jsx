@@ -1,5 +1,5 @@
-import { getAudioAnalysis } from "../../../spotify"
 import { useState, useEffect } from 'react'
+import { getAudioAnalysis } from "../../../spotify"
 import Spinner from "../../../components/Loader/Spinner"
 
 export default function PlaylistAudioAnalysis({trackId}) {
