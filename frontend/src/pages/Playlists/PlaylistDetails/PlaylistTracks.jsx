@@ -2,7 +2,7 @@ import PlaylistAudioAnalysis from './PlaylistAudioAnalysis'
 
 export default function PlaylistTracks({tracks}) {
     const tableData = tracks.map((t, idx)=> (
-        <tr>
+        <tr className="odd:bg-dark-gray even:bg-dark-dark-gray">
             <td className="p-track">
                 <span className="p-track-name">
                 {t.track.name} 
@@ -24,7 +24,7 @@ export default function PlaylistTracks({tracks}) {
         <div className="mx-10">
             <table className="mx-auto border-collapse my-10 xl:text-lg">
                 <thead>
-                <tr>
+                <tr className="bg-dark-dark-gray">
                     <th className="min-w-[260px]">Track</th>
                     <th>Tempo</th>
                     <th className="w-10">Time Signature</th>
