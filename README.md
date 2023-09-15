@@ -3,6 +3,12 @@
 <p>Spotify Metrics is a full-stack, single-page application that allows users to view their Spotify listening metrics, as well as Spotify's audio analysis for their saved playlists. Users can see their top tracks and top artists for different time ranges: all time, the last 6 months, and the last 4 weeks. Using Spotify's audio analysis, users can view the audio features for all of the tracks within their saved playlists, including the track's tempo, time signature, bars, key, mode and loudness. </p>
 <p>This application was created to provide Spotify listeners an opportunity to see which tracks and artists they've been enjoying, without having to wait for Spotify wrapped at the end of the calendar year. It also allows Spotify users to quickly find tracks that fit their needs, using parameters like tempo, for example. Useful for runners who may be looking for tracks with a certain tempo to match their running cadence, or dancers who need to find tracks with a waltz time signature, or for a DJ looking for songs in the same key for a potential mashup, and many more.</p>
 
+## Getting Started 
+
+This application is still in Development Mode, so if you would like to test the application, contact me at lauren.camille.mendoza@gmail.com and provide me with the email address that you use to log in to Spotify. I will allow access to your account so you can view your Spotify account information in the application. 
+
+### [Here is the link to my application!](https://my-metrics-app-743645bb0090.herokuapp.com/)
+
 ## Screenshots
 
 ### Home Screen
@@ -44,11 +50,6 @@
 2. [Sort Your Music](http://sortyourmusic.playlistmachinery.com/index.html)
 3. [Receiptify](https://receiptify.herokuapp.com/)
 
-## Getting Started 
-
-This application is still in Development Mode, so if you would like to test the application, contact me at lauren.camille.mendoza@gmail.com and provide me with the email address that you use to log in to Spotify. I will allow access to your account so you can view your Spotify account information in the application. 
-
-Click [here](https://my-metrics-app-743645bb0090.herokuapp.com/) to open the app!
 
 ## Future Features
 
