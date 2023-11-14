@@ -61,8 +61,8 @@ This application is still in Development Mode, so if you would like to test the 
 - Light mode
 - Improved mobile responsiveness for playlist details page
 
+
 ## Known Issues
 
-- Application needs to be approved through Spotify to allow for an extended quota of users, which will allow all Spotify users to log in to the application and view their data
 - After an hour, access key resets, and user is not be able to see information from Spotify's API without manually refreshing the page
 
